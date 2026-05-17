@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Let Her Rise · Speaker Marketing Kit</title>
-  <meta name="description" content="The complete marketing kit for Let Her Rise 2026 speakers — emails, social graphics, scripts, and more.">
+  <meta name="description" content="The complete marketing kit for Let Her Rise 2026 speakers, emails, social graphics, scripts, and more.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%234A3540'/%3E%3Ctext x='50' y='62' font-family='Georgia,serif' font-size='42' fill='%23F2EDE5' text-anchor='middle' font-weight='bold'%3ELR%3C/text%3E%3C/svg%3E">
   <style>
@@ -701,6 +701,47 @@
       margin-bottom: 16px;
     }
 
+    /* ============================================
+       DROPDOWN (details/summary) for talking points, Q&A, DMs
+       ============================================ */
+    details.dropdown {
+      border-top: 1px solid var(--border-soft);
+      padding: 0;
+    }
+    details.dropdown:first-of-type { border-top: none; }
+    details.dropdown summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: var(--font-serif);
+      font-size: 19px;
+      color: var(--aubergine);
+      line-height: 1.3;
+    }
+    details.dropdown summary::-webkit-details-marker { display: none; }
+    details.dropdown summary::after {
+      content: '+';
+      font-family: var(--font-sans);
+      font-size: 22px;
+      color: var(--rose);
+      font-weight: 400;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    details.dropdown[open] summary::after { content: '−'; }
+    details.dropdown summary:hover { color: var(--aubergine-deep); }
+    .dropdown-body {
+      padding: 4px 0 20px;
+    }
+    .dropdown-body .card-subtitle {
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
     /* Hashtag pool */
     .hashtag-group { margin-bottom: 20px; }
     .hashtag-group h5 {
@@ -790,7 +831,7 @@
       <div class="card">
         <div class="card-eyebrow">Required Reading</div>
         <h3 class="card-title">The Speaker Kit Instruction Sheet</h3>
-        <p class="card-subtitle">4-page guide — what's in the kit, how to use it, week-one action plan, do's and don'ts.</p>
+        <p class="card-subtitle">4-page guide, what's in the kit, how to use it, week-one action plan, do's and don'ts.</p>
         <div class="card-actions">
           <a href="assets/docs/let-her-rise-speaker-kit-instructions.docx" class="btn btn-primary" download>↓ Download Instructions (.docx)</a>
         </div>
@@ -825,7 +866,7 @@
     <div class="container">
       <div class="section-eyebrow">02 · Email Templates</div>
       <h2 class="section-title">Three emails. One arc.</h2>
-      <p class="section-intro">Announcement → talk preview → last call. Each one ready to copy into your email provider (Flodesk, Mailchimp, MailerLite, ConvertKit — all work). Customize the bracketed bits and the header image, then send.</p>
+      <p class="section-intro">Announcement → talk preview → last call. Each one ready to copy into your email provider. Flodesk, Mailchimp, MailerLite, ConvertKit, they all work. Customize the bracketed bits and the header image, then send.</p>
       <p class="section-intro" style="margin-top: -8px;"><em>P.S. If you don't yet have a place you're sending out bulk emails from, I highly recommend MailerLite.</em></p>
 
       <!-- EMAIL 01 -->
@@ -836,7 +877,7 @@
 
         <strong style="font-family: var(--font-sans); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); display: block; margin-top: 8px;">Subject Line Options</strong>
         <ul class="subject-list">
-          <li><div class="subject-text"><strong>I'm taking the stage — and I'm saving you a seat</strong><em>Preview: Let Her Rise · Aug 26–28 · Utah</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: I'm taking the stage — and I'm saving you a seat
+          <li><div class="subject-text"><strong>I'm taking the stage, and I'm saving you a seat</strong><em>Preview: Let Her Rise · Aug 26–28 · Utah</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: I'm taking the stage, and I'm saving you a seat
 Preview: Let Her Rise · Aug 26–28 · Utah</textarea></li>
           <li><div class="subject-text"><strong>For the woman who's tired of pushing through</strong><em>Preview: 3 days. 8 speakers. One sacred decision.</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: For the woman who's tired of pushing through
 Preview: 3 days. 8 speakers. One sacred decision.</textarea></li>
@@ -888,7 +929,7 @@ Preview: Behind my talk at Let Her Rise.</textarea></li>
       <div class="card">
         <div class="card-eyebrow">Email 3 · Send 7–10 days before Early Bird closes</div>
         <h3 class="card-title">The Last Call</h3>
-        <p class="card-subtitle">Direct. Brief. Scarcity-driven. This is the conversion push — don't bury the deadline.</p>
+        <p class="card-subtitle">Direct, brief, urgent. This is the closer, so don't bury the deadline.</p>
 
         <strong style="font-family: var(--font-sans); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); display: block; margin-top: 8px;">Subject Line Options</strong>
         <ul class="subject-list">
@@ -902,7 +943,7 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
 
         <div class="callout">
           <div class="callout-label">Before You Send</div>
-          <p>Email 3 has two placeholders for the <strong>Early Bird close date</strong> — search for <code style="background: rgba(74,53,64,0.08); padding: 1px 6px; border-radius: 3px;">[DATE]</code> and update both spots before sending.</p>
+          <p>Email 3 has two placeholders for the <strong>Early Bird close date</strong>, search for <code style="background: rgba(74,53,64,0.08); padding: 1px 6px; border-radius: 3px;">[DATE]</code> and update both spots before sending.</p>
         </div>
 
         <div class="email-preview-wrap">
@@ -931,7 +972,7 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
     <div class="container">
       <div class="section-eyebrow">03 · Visual Assets</div>
       <h2 class="section-title">Your Canva templates.</h2>
-      <p class="section-intro">Four reusable templates. Click "Use This Template," your own editable copy auto-creates in your Canva account. Swap your photo, name, title, and speech title. Do <em>not</em> change the colors or fonts — consistency across all 8 speakers is part of the design.</p>
+      <p class="section-intro">Four reusable templates. Click "Use This Template," your own editable copy auto-creates in your Canva account. Swap your photo, name, title, and speech title. Do <em>not</em> change the colors or fonts, consistency across all 8 speakers is part of the design.</p>
 
       <div class="canva-grid">
         <!-- CANVA TEMPLATE: EMAIL HEADER -->
@@ -1001,7 +1042,7 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
     <div class="container">
       <div class="section-eyebrow">04 · Social Caption Library</div>
       <h2 class="section-title">What to write next to the photo.</h2>
-      <p class="section-intro">Multiple voice variants per post type. Pick the one closest to how you naturally write, then tweak the bracketed bits. Each one ends with a CTA — leave it in.</p>
+      <p class="section-intro">Multiple voice variants per post type. Pick the one closest to how you naturally write, then tweak the bracketed bits. Each one ends with a CTA, leave it in.</p>
 
       <!-- ANNOUNCEMENT -->
       <div class="card">
@@ -1009,25 +1050,25 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
         <p class="card-subtitle">For your first post breaking the news. Post this once you've added the header image to your bio.</p>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant A — Vulnerable / mission-driven</h4>
+          <h4 class="variant-group-title">Variant A: Vulnerable / mission-driven</h4>
           <div class="copy-card">
             <div class="copy-display">There are rooms you walk into. And there are rooms you've been <em>called</em> to.
 
-This August, I'm stepping onto the stage at Let Her Rise — a 3-day experience for women entrepreneurs who are tired of pushing through and ready to rise on their own terms.
+This August, I'm stepping onto the stage at Let Her Rise, a 3-day experience for women entrepreneurs who are tired of pushing through and ready to rise on their own terms.
 
 I said yes because if I'd had a room like this when I was starting out, everything would have been different.
 
-If something just stirred reading this — trust it.
+If something just stirred reading this, trust it.
 
 Aug 26–28 · Lindon, UT · Early Bird open now
 [YOUR LINK]</div>
             <textarea class="copy-source" hidden>There are rooms you walk into. And there are rooms you've been called to.
 
-This August, I'm stepping onto the stage at Let Her Rise — a 3-day experience for women entrepreneurs who are tired of pushing through and ready to rise on their own terms.
+This August, I'm stepping onto the stage at Let Her Rise, a 3-day experience for women entrepreneurs who are tired of pushing through and ready to rise on their own terms.
 
 I said yes because if I'd had a room like this when I was starting out, everything would have been different.
 
-If something just stirred reading this — trust it.
+If something just stirred reading this, trust it.
 
 Aug 26–28 · Lindon, UT · Early Bird open now
 [YOUR LINK]</textarea>
@@ -1036,7 +1077,7 @@ Aug 26–28 · Lindon, UT · Early Bird open now
         </div>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant B — Confident / business voice</h4>
+          <h4 class="variant-group-title">Variant B: Confident / business voice</h4>
           <div class="copy-card">
             <div class="copy-display">Big news: I'm speaking at Let Her Rise 2026.
 
@@ -1044,7 +1085,7 @@ Aug 26–28 · Lindon, UT · Early Bird open now
 
 Aug 26–28 in Lindon, UT.
 
-I picked who I wanted in that room — and you're on the list. Early Bird is open. Tap to reserve your seat.
+I picked who I wanted in that room, and you're on the list. Early Bird is open. Tap to reserve your seat.
 
 [YOUR LINK]</div>
             <textarea class="copy-source" hidden>Big news: I'm speaking at Let Her Rise 2026.
@@ -1053,7 +1094,7 @@ I picked who I wanted in that room — and you're on the list. Early Bird is ope
 
 Aug 26–28 in Lindon, UT.
 
-I picked who I wanted in that room — and you're on the list. Early Bird is open. Tap to reserve your seat.
+I picked who I wanted in that room, and you're on the list. Early Bird is open. Tap to reserve your seat.
 
 [YOUR LINK]</textarea>
             <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
@@ -1061,24 +1102,24 @@ I picked who I wanted in that room — and you're on the list. Early Bird is ope
         </div>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant C — Direct / personal invite</h4>
+          <h4 class="variant-group-title">Variant C: Direct / personal invite</h4>
           <div class="copy-card">
             <div class="copy-display">I want to tell you something I've been holding for a few weeks.
 
-I'm one of 8 speakers taking the stage at Let Her Rise this August — a 3-day women's leadership experience in Lindon, UT.
+I'm one of 8 speakers taking the stage at Let Her Rise this August, a 3-day women's leadership experience in Lindon, UT.
 
 I'm bringing my work on [YOUR TOPIC] to a room full of women I know are doing the same things you are: building, leading, surviving, dreaming.
 
-If you've been waiting for a sign — this is it. Aug 26–28.
+If you've been waiting for a sign, this is it. Aug 26–28.
 
 [YOUR LINK]</div>
             <textarea class="copy-source" hidden>I want to tell you something I've been holding for a few weeks.
 
-I'm one of 8 speakers taking the stage at Let Her Rise this August — a 3-day women's leadership experience in Lindon, UT.
+I'm one of 8 speakers taking the stage at Let Her Rise this August, a 3-day women's leadership experience in Lindon, UT.
 
 I'm bringing my work on [YOUR TOPIC] to a room full of women I know are doing the same things you are: building, leading, surviving, dreaming.
 
-If you've been waiting for a sign — this is it. Aug 26–28.
+If you've been waiting for a sign, this is it. Aug 26–28.
 
 [YOUR LINK]</textarea>
             <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
@@ -1092,11 +1133,11 @@ If you've been waiting for a sign — this is it. Aug 26–28.
         <p class="card-subtitle">For mid-cycle, 3–5 weeks out. Tease what you're bringing on stage.</p>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant A — Preparation moment</h4>
+          <h4 class="variant-group-title">Variant A: Preparation moment</h4>
           <div class="copy-card">
             <div class="copy-display">Some talks you prepare for weeks. This one I've been preparing for years.
 
-When I take the Let Her Rise stage on Aug 26, I'm bringing [TALK TITLE] — the work I wish someone had handed me when I was [STORY MOMENT].
+When I take the Let Her Rise stage on Aug 26, I'm bringing [TALK TITLE], the work I wish someone had handed me when I was [STORY MOMENT].
 
 Here's what I want every woman in that room to walk away with:
 
@@ -1109,7 +1150,7 @@ This isn't theory. It's the work I've lived, refined, and watched transform real
 Early Bird seats are still open: [YOUR LINK]</div>
             <textarea class="copy-source" hidden>Some talks you prepare for weeks. This one I've been preparing for years.
 
-When I take the Let Her Rise stage on Aug 26, I'm bringing [TALK TITLE] — the work I wish someone had handed me when I was [STORY MOMENT].
+When I take the Let Her Rise stage on Aug 26, I'm bringing [TALK TITLE], the work I wish someone had handed me when I was [STORY MOMENT].
 
 Here's what I want every woman in that room to walk away with:
 
@@ -1125,7 +1166,7 @@ Early Bird seats are still open: [YOUR LINK]</textarea>
         </div>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant B — Why this room matters</h4>
+          <h4 class="variant-group-title">Variant B: Why this room matters</h4>
           <div class="copy-card">
             <div class="copy-display">Here's what makes Let Her Rise different from every other women's conference I've been invited to.
 
@@ -1133,7 +1174,7 @@ It's not a stage full of strategies stacked on strategies.
 It's not motivational fluff.
 It's not a sales pitch dressed up in worship music.
 
-It's a room of God-centered women entrepreneurs doing the actual work — building, leading, struggling, rising — and choosing to do it together instead of alone.
+It's a room of God-centered women entrepreneurs doing the actual work, building, leading, struggling, rising, and choosing to do it together instead of alone.
 
 I want you there. Aug 26–28 · Lindon, UT.
 [YOUR LINK]</div>
@@ -1143,7 +1184,7 @@ It's not a stage full of strategies stacked on strategies.
 It's not motivational fluff.
 It's not a sales pitch dressed up in worship music.
 
-It's a room of God-centered women entrepreneurs doing the actual work — building, leading, struggling, rising — and choosing to do it together instead of alone.
+It's a room of God-centered women entrepreneurs doing the actual work, building, leading, struggling, rising, and choosing to do it together instead of alone.
 
 I want you there. Aug 26–28 · Lindon, UT.
 [YOUR LINK]</textarea>
@@ -1158,7 +1199,7 @@ I want you there. Aug 26–28 · Lindon, UT.
         <p class="card-subtitle">For the woman thinking "is this for me?"</p>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant A — The honest filter</h4>
+          <h4 class="variant-group-title">Variant A: The honest filter</h4>
           <div class="copy-card">
             <div class="copy-display">Let Her Rise isn't for everyone. Here's who it IS for:
 
@@ -1168,7 +1209,7 @@ I want you there. Aug 26–28 · Lindon, UT.
 ✓ The one whose faith is the foundation, not the marketing angle
 ✓ The one ready to lead from peace instead of pressure
 
-If you nodded at any of those — this room was built for you.
+If you nodded at any of those, this room was built for you.
 
 Aug 26–28 · Lindon, UT · [YOUR LINK]</div>
             <textarea class="copy-source" hidden>Let Her Rise isn't for everyone. Here's who it IS for:
@@ -1179,7 +1220,7 @@ Aug 26–28 · Lindon, UT · [YOUR LINK]</div>
 ✓ The one whose faith is the foundation, not the marketing angle
 ✓ The one ready to lead from peace instead of pressure
 
-If you nodded at any of those — this room was built for you.
+If you nodded at any of those, this room was built for you.
 
 Aug 26–28 · Lindon, UT · [YOUR LINK]</textarea>
             <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
@@ -1187,7 +1228,7 @@ Aug 26–28 · Lindon, UT · [YOUR LINK]</textarea>
         </div>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant B — The permission slip</h4>
+          <h4 class="variant-group-title">Variant B: The permission slip</h4>
           <div class="copy-card">
             <div class="copy-display">A reminder for the woman who's been quietly considering Let Her Rise:
 
@@ -1218,7 +1259,7 @@ Aug 26–28 · Early Bird open · [YOUR LINK]</textarea>
         <p class="card-subtitle">Final 7–10 days before Early Bird closes.</p>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant A — Direct urgency</h4>
+          <h4 class="variant-group-title">Variant A: Direct urgency</h4>
           <div class="copy-card">
             <div class="copy-display">Last call.
 
@@ -1239,7 +1280,7 @@ If you've been sitting with this, take this as your nudge.
         </div>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant B — Soft urgency / pull</h4>
+          <h4 class="variant-group-title">Variant B: Soft urgency / pull</h4>
           <div class="copy-card">
             <div class="copy-display">I'm not going to keep posting about Let Her Rise. You know it's happening. You know I'd love to see you there.
 
@@ -1260,9 +1301,9 @@ I'll be in that room either way. I just want you in it with me.
         </div>
 
         <div class="variant-group">
-          <h4 class="variant-group-title">Variant C — The fence-sitter</h4>
+          <h4 class="variant-group-title">Variant C: The fence-sitter</h4>
           <div class="copy-card">
-            <div class="copy-display">If "I'll decide next week" has been your relationship with Let Her Rise for the last month — this is the post for you.
+            <div class="copy-display">If "I'll decide next week" has been your relationship with Let Her Rise for the last month, this is the post for you.
 
 Early Bird closes [DATE]. That's the decision deadline.
 
@@ -1270,7 +1311,7 @@ Worst case: you spend 3 days in a beautiful Utah venue surrounded by women doing
 Best case: you walk out a different woman than the one who walked in.
 
 [YOUR LINK]</div>
-            <textarea class="copy-source" hidden>If "I'll decide next week" has been your relationship with Let Her Rise for the last month — this is the post for you.
+            <textarea class="copy-source" hidden>If "I'll decide next week" has been your relationship with Let Her Rise for the last month, this is the post for you.
 
 Early Bird closes [DATE]. That's the decision deadline.
 
@@ -1286,7 +1327,7 @@ Best case: you walk out a different woman than the one who walked in.
       <!-- HASHTAGS -->
       <div class="card">
         <h3 class="card-title">Hashtag Pool</h3>
-        <p class="card-subtitle">Mix 5–10 per post. Click any tag to copy. Don't use all of them at once — pick what's aligned with each post.</p>
+        <p class="card-subtitle">Mix 5–10 per post. Click any tag to copy. Don't use all of them at once, pick what's aligned with each post.</p>
 
         <div class="hashtag-group">
           <h5>Event-specific (always include)</h5>
@@ -1338,212 +1379,197 @@ Best case: you walk out a different woman than the one who walked in.
     <div class="container">
       <div class="section-eyebrow">05 · DM & Text Scripts</div>
       <h2 class="section-title">For your warm network.</h2>
-      <p class="section-intro">Highest converting channel for events like this. Use these for 1:1 outreach to your closest circle — friends, peers, past clients you genuinely think would benefit.</p>
+      <p class="section-intro">This is where most of your tickets will actually come from. Use these for 1:1 outreach to your closest circle: friends, peers, past clients who you actually think would love it.</p>
 
       <div class="callout">
-        <div class="callout-label">The 90-Second Rule</div>
-        <p>Every templated DM needs ONE specific line added before you send it. "Thought of you because of [the season you're in / your launch / our last conversation]." That one line is the difference between an outreach that converts and one that gets ignored. <strong>Don't skip it.</strong></p>
+        <div class="callout-label">One Quick Rule</div>
+        <p>Every templated DM needs ONE specific line added before you send it. "Thought of you because of [whatever you actually thought of, their launch, the season they're in, your last conversation]." That single line is the difference between something that lands and something that gets ignored. <strong>Don't skip it.</strong></p>
       </div>
 
       <!-- PERSONAL INVITE -->
       <div class="card">
         <h3 class="card-title">1. Personal Invite</h3>
-        <p class="card-subtitle">For your close network — friends, peers, past clients.</p>
+        <p class="card-subtitle">For your close network: friends, peers, past clients.</p>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">Script A — Warm and direct</h4>
-          <div class="copy-card">
-            <div class="copy-display">Hey [NAME] —
+        <details class="dropdown">
+          <summary>Warm and direct</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME],
 
-I'm speaking at a women's leadership conference in Utah this August (Let Her Rise, Aug 26–28) and I genuinely thought of you when I was looking at the invite list I want to bring.
+I'm speaking at a women's leadership conference here in Utah this August (Let Her Rise, Aug 26 to 28) and I thought of you when I was making my invite list.
 
-[ONE SPECIFIC LINE — why this one is for them]
+[ONE SPECIFIC LINE: why this one is for them]
 
-Want me to send you the link? No pressure, just thought you should know it exists.</div>
-            <textarea class="copy-source" hidden>Hey [NAME] —
+Want me to send you the link? No pressure either way, just thought you should know about it.</div>
+              <textarea class="copy-source" hidden>Hey [NAME],
 
-I'm speaking at a women's leadership conference in Utah this August (Let Her Rise, Aug 26–28) and I genuinely thought of you when I was looking at the invite list I want to bring.
+I'm speaking at a women's leadership conference here in Utah this August (Let Her Rise, Aug 26 to 28) and I thought of you when I was making my invite list.
 
-[ONE SPECIFIC LINE — why this one is for them]
+[ONE SPECIFIC LINE: why this one is for them]
 
-Want me to send you the link? No pressure, just thought you should know it exists.</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+Want me to send you the link? No pressure either way, just thought you should know about it.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
           </div>
-        </div>
+        </details>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">Script B — Casual (closer friends)</h4>
-          <div class="copy-card">
-            <div class="copy-display">Quick one — are you doing anything Aug 26–28?
+        <details class="dropdown">
+          <summary>Casual (closer friends)</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Quick one, are you doing anything Aug 26 to 28?
 
-I'm speaking at a women's biz conference here in Utah and the more I think about it the more I think you'd love it.
+I'm speaking at a women's business conference here in Utah and the more I think about it the more I think you'd love it.
 
-Want details or want me to leave you alone? 😄</div>
-            <textarea class="copy-source" hidden>Quick one — are you doing anything Aug 26–28?
+Want the details, or want me to leave you alone? 😄</div>
+              <textarea class="copy-source" hidden>Quick one, are you doing anything Aug 26 to 28?
 
-I'm speaking at a women's biz conference here in Utah and the more I think about it the more I think you'd love it.
+I'm speaking at a women's business conference here in Utah and the more I think about it the more I think you'd love it.
 
-Want details or want me to leave you alone? 😄</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+Want the details, or want me to leave you alone? 😄</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
           </div>
-        </div>
-
-        <div class="variant-group">
-          <h4 class="variant-group-title">Script C — For past clients</h4>
-          <div class="copy-card">
-            <div class="copy-display">Hey [NAME], hope [SPECIFIC THING — their business / family / project] is going well.
-
-I'm speaking at Let Her Rise this August — it's a 3-day women's leadership conference in Lindon, and I keep thinking about how much of what I'm sharing on stage maps to stuff we worked through together. Felt weird not to tell you about it.
-
-Want the link? Early Bird is still open.</div>
-            <textarea class="copy-source" hidden>Hey [NAME], hope [SPECIFIC THING — their business / family / project] is going well.
-
-I'm speaking at Let Her Rise this August — it's a 3-day women's leadership conference in Lindon, and I keep thinking about how much of what I'm sharing on stage maps to stuff we worked through together. Felt weird not to tell you about it.
-
-Want the link? Early Bird is still open.</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
-          </div>
-        </div>
+        </details>
       </div>
 
       <!-- FOLLOW-UP -->
       <div class="card">
         <h3 class="card-title">2. "Thinking of You" Follow-Up</h3>
-        <p class="card-subtitle">Send 5–7 days after the first invite — only if you'd genuinely follow up.</p>
+        <p class="card-subtitle">Send 5 to 7 days after the first invite, only if you'd actually follow up.</p>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">Soft re-engage</h4>
-          <div class="copy-card">
-            <div class="copy-display">Hey [NAME] — circling back on the conference thing. No pressure at all. Just wanted to make sure I didn't let it slip past you in case you were on the fence.
+        <details class="dropdown">
+          <summary>Soft check-in</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME], circling back on the conference thing. No pressure at all. Just wanted to make sure I didn't let it slip past you in case you were on the fence.
 
 [YOUR LINK]</div>
-            <textarea class="copy-source" hidden>Hey [NAME] — circling back on the conference thing. No pressure at all. Just wanted to make sure I didn't let it slip past you in case you were on the fence.
+              <textarea class="copy-source" hidden>Hey [NAME], circling back on the conference thing. No pressure at all. Just wanted to make sure I didn't let it slip past you in case you were on the fence.
 
 [YOUR LINK]</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
           </div>
-        </div>
+        </details>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">Add a value pull</h4>
-          <div class="copy-card">
-            <div class="copy-display">Hey [NAME] — I know I sent you the Let Her Rise info a bit ago. Not following up to pressure you, but I just got the speaker list updated and [SPECIFIC SPEAKER OR DETAIL — e.g., "Jeff Griffin, USA Paralympian, is doing the keynote and his story is unreal"]. Thought you'd find that interesting.
+        <details class="dropdown">
+          <summary>Mention something new</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME], I know I sent the Let Her Rise info a bit ago. Not following up to pressure you, but I just got an update on the speaker list and [SPECIFIC DETAIL: e.g., "Jeff Griffin, USA Paralympian, is doing the keynote"]. Thought you might find that interesting.
 
-Anyway — here if you want it: [LINK]</div>
-            <textarea class="copy-source" hidden>Hey [NAME] — I know I sent you the Let Her Rise info a bit ago. Not following up to pressure you, but I just got the speaker list updated and [SPECIFIC SPEAKER OR DETAIL — e.g., "Jeff Griffin, USA Paralympian, is doing the keynote and his story is unreal"]. Thought you'd find that interesting.
+Anyway, here it is if you want it: [LINK]</div>
+              <textarea class="copy-source" hidden>Hey [NAME], I know I sent the Let Her Rise info a bit ago. Not following up to pressure you, but I just got an update on the speaker list and [SPECIFIC DETAIL: e.g., "Jeff Griffin, USA Paralympian, is doing the keynote"]. Thought you might find that interesting.
 
-Anyway — here if you want it: [LINK]</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+Anyway, here it is if you want it: [LINK]</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
           </div>
-        </div>
+        </details>
       </div>
 
       <!-- GROUP CHAT -->
       <div class="card">
         <h3 class="card-title">3. Group Chat / Community Blast</h3>
-        <p class="card-subtitle">Slack, Discord, group thread, mastermind — where everyone knows you.</p>
+        <p class="card-subtitle">Slack, Discord, group thread, mastermind. Where everyone already knows you.</p>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">Group chat / text thread</h4>
-          <div class="copy-card">
-            <div class="copy-display">Posting once and never again, promise 😄
+        <details class="dropdown">
+          <summary>Group chat / text thread</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Posting once and never again, promise 😄
 
-I'm speaking at Let Her Rise Aug 26–28 in Lindon — 3-day women's leadership conference, 8 speakers, faith-centered, built for the woman who's doing the real work behind the scenes.
+I'm speaking at Let Her Rise Aug 26 to 28 in Lindon. It's a 3-day women's leadership conference, 8 speakers, faith-centered, built for the woman who's doing the real work behind the scenes.
 
-If anyone wants the deets, here's the link: [YOUR LINK]
-Early Bird is open + I'd genuinely love to see any of you there.</div>
-            <textarea class="copy-source" hidden>Posting once and never again, promise 😄
+If anyone wants more info, here's the link: [YOUR LINK]
+Early Bird's open and I'd love to see any of you there.</div>
+              <textarea class="copy-source" hidden>Posting once and never again, promise 😄
 
-I'm speaking at Let Her Rise Aug 26–28 in Lindon — 3-day women's leadership conference, 8 speakers, faith-centered, built for the woman who's doing the real work behind the scenes.
+I'm speaking at Let Her Rise Aug 26 to 28 in Lindon. It's a 3-day women's leadership conference, 8 speakers, faith-centered, built for the woman who's doing the real work behind the scenes.
 
-If anyone wants the deets, here's the link: [YOUR LINK]
-Early Bird is open + I'd genuinely love to see any of you there.</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+If anyone wants more info, here's the link: [YOUR LINK]
+Early Bird's open and I'd love to see any of you there.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
           </div>
-        </div>
+        </details>
       </div>
 
       <!-- LAST CALL -->
       <div class="card">
         <h3 class="card-title">4. Last-Chance Nudge</h3>
-        <p class="card-subtitle">For specific people who showed interest but didn't pull the trigger.</p>
+        <p class="card-subtitle">For specific people who showed interest but haven't pulled the trigger.</p>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">The honest reminder</h4>
-          <div class="copy-card">
-            <div class="copy-display">Hey [NAME] — quick heads up that Early Bird for Let Her Rise closes [DATE]. After that it's $100 more per seat. Wanted to make sure you knew before the window closed.
+        <details class="dropdown">
+          <summary>The honest reminder</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME], quick heads up that Early Bird for Let Her Rise closes [DATE]. After that it's $100 more per seat. Wanted to make sure you knew before the window closed.
 
 If it's a no, totally cool. If it's a maybe, here's the link: [YOUR LINK]</div>
-            <textarea class="copy-source" hidden>Hey [NAME] — quick heads up that Early Bird for Let Her Rise closes [DATE]. After that it's $100 more per seat. Wanted to make sure you knew before the window closed.
+              <textarea class="copy-source" hidden>Hey [NAME], quick heads up that Early Bird for Let Her Rise closes [DATE]. After that it's $100 more per seat. Wanted to make sure you knew before the window closed.
 
 If it's a no, totally cool. If it's a maybe, here's the link: [YOUR LINK]</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
           </div>
-        </div>
+        </details>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">The personal pull</h4>
-          <div class="copy-card">
-            <div class="copy-display">Hey [NAME] — I'm not gonna keep bugging you about this, but Early Bird for Let Her Rise closes [DATE] and I keep thinking I'd really love to see you in that room.
+        <details class="dropdown">
+          <summary>The personal pull</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME], not gonna keep bugging you about this, but Early Bird for Let Her Rise closes [DATE] and I keep thinking I'd really love to see you in that room.
 
 Last gentle nudge. [YOUR LINK]</div>
-            <textarea class="copy-source" hidden>Hey [NAME] — I'm not gonna keep bugging you about this, but Early Bird for Let Her Rise closes [DATE] and I keep thinking I'd really love to see you in that room.
+              <textarea class="copy-source" hidden>Hey [NAME], not gonna keep bugging you about this, but Early Bird for Let Her Rise closes [DATE] and I keep thinking I'd really love to see you in that room.
 
 Last gentle nudge. [YOUR LINK]</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
           </div>
-        </div>
+        </details>
       </div>
 
-      <!-- OBJECTION HANDLERS -->
+      <!-- PUSHBACK -->
       <div class="card">
-        <h3 class="card-title">5. Response Handlers</h3>
-        <p class="card-subtitle">When people push back. Drop these into the thread when needed.</p>
+        <h3 class="card-title">5. When People Push Back</h3>
+        <p class="card-subtitle">Quick responses for the most common pushback.</p>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">"It's too expensive."</h4>
-          <div class="copy-card">
-            <div class="copy-display">Totally get it — and to be fair, it's $297 for 3 full days, 8 speakers, and a sound bath if you go VIP. That's about $100/day for a conference of this caliber. But I get if the timing's off — no pressure either way. Just wanted to make sure you had the full picture.</div>
-            <textarea class="copy-source" hidden>Totally get it — and to be fair, it's $297 for 3 full days, 8 speakers, and a sound bath if you go VIP. That's about $100/day for a conference of this caliber. But I get if the timing's off — no pressure either way. Just wanted to make sure you had the full picture.</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
+        <details class="dropdown">
+          <summary>"It's too expensive."</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Totally get it. For what it's worth, $297 for 3 full days and 8 speakers works out to about $100 a day, which is on the lower end for a conference like this. But I get if the timing's just off, no pressure. Just wanted to make sure you had the full picture.</div>
+              <textarea class="copy-source" hidden>Totally get it. For what it's worth, $297 for 3 full days and 8 speakers works out to about $100 a day, which is on the lower end for a conference like this. But I get if the timing's just off, no pressure. Just wanted to make sure you had the full picture.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
+            </div>
           </div>
-        </div>
+        </details>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">"I can't take 3 days off."</h4>
-          <div class="copy-card">
-            <div class="copy-display">Yeah, I hear that a lot. Quick thought though — the agenda runs 9–6 daily, which means you could honestly come for whichever day fits your schedule and still get a ton of value. Day 1 is "Recognize," Day 2 is "Rewire," Day 3 is "Rise" — each builds on the last but each stands alone too. Worth at least looking at the schedule.</div>
-            <textarea class="copy-source" hidden>Yeah, I hear that a lot. Quick thought though — the agenda runs 9–6 daily, which means you could honestly come for whichever day fits your schedule and still get a ton of value. Day 1 is "Recognize," Day 2 is "Rewire," Day 3 is "Rise" — each builds on the last but each stands alone too. Worth at least looking at the schedule.</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
+        <details class="dropdown">
+          <summary>"I can't take 3 days off."</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Yeah, I hear that a lot. Quick thought though, the agenda runs 9 to 6 daily, so you could come for whichever day fits your schedule and still get a ton out of it. Day 1 is "Recognize," Day 2 is "Rewire," Day 3 is "Rise." Each builds on the last, but each stands alone too. Worth at least looking at the schedule.</div>
+              <textarea class="copy-source" hidden>Yeah, I hear that a lot. Quick thought though, the agenda runs 9 to 6 daily, so you could come for whichever day fits your schedule and still get a ton out of it. Day 1 is "Recognize," Day 2 is "Rewire," Day 3 is "Rise." Each builds on the last, but each stands alone too. Worth at least looking at the schedule.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
+            </div>
           </div>
-        </div>
+        </details>
 
-        <div class="variant-group">
-          <h4 class="variant-group-title">"Utah's too far."</h4>
-          <div class="copy-card">
-            <div class="copy-display">Fair. It IS Utah. But I'll tell you what I've heard from women who've traveled in for events like this: the right room is worth a flight. Salt Lake's a quick connect from most major cities and Lindon's 40 mins from the airport. If you're curious, I can send you the practical details.</div>
-            <textarea class="copy-source" hidden>Fair. It IS Utah. But I'll tell you what I've heard from women who've traveled in for events like this: the right room is worth a flight. Salt Lake's a quick connect from most major cities and Lindon's 40 mins from the airport. If you're curious, I can send you the practical details.</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
+        <details class="dropdown">
+          <summary>"I'll think about it." / "Maybe next year."</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Sounds good. Just so you have it: Early Bird closes [DATE] and it's a $100 jump after that. If you want a reminder before the window closes, happy to send one.</div>
+              <textarea class="copy-source" hidden>Sounds good. Just so you have it: Early Bird closes [DATE] and it's a $100 jump after that. If you want a reminder before the window closes, happy to send one.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
+            </div>
           </div>
-        </div>
-
-        <div class="variant-group">
-          <h4 class="variant-group-title">"I'm not sure it's for me / not sure I'd fit in."</h4>
-          <div class="copy-card">
-            <div class="copy-display">I think everyone in that room is going to be feeling that exact thing on Day 1, so you'd be in good company 😄. Honestly though — if you're a woman building something (a business, a brand, a life on your terms) and you're tired of doing it alone, this is exactly the room. Want me to send you the speaker bios so you can see if it lands?</div>
-            <textarea class="copy-source" hidden>I think everyone in that room is going to be feeling that exact thing on Day 1, so you'd be in good company 😄. Honestly though — if you're a woman building something (a business, a brand, a life on your terms) and you're tired of doing it alone, this is exactly the room. Want me to send you the speaker bios so you can see if it lands?</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
-          </div>
-        </div>
-
-        <div class="variant-group">
-          <h4 class="variant-group-title">"I'll think about it." / "Maybe next year."</h4>
-          <div class="copy-card">
-            <div class="copy-display">Sounds good — and just so you have it: Early Bird closes [DATE], $100 jump after that. If you want a reminder before the window closes I'm happy to send one.</div>
-            <textarea class="copy-source" hidden>Sounds good — and just so you have it: Early Bird closes [DATE], $100 jump after that. If you want a reminder before the window closes I'm happy to send one.</textarea>
-            <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
-          </div>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -1554,103 +1580,59 @@ Last gentle nudge. [YOUR LINK]</textarea>
   <section id="talking">
     <div class="container">
       <div class="section-eyebrow">06 · Talking Points</div>
-      <h2 class="section-title">For when your mouth opens.</h2>
-      <p class="section-intro">Chamber meetings, masterminds, podcasts, coffee chats. Memorize the version that fits the moment.</p>
+      <h2 class="section-title">For when it comes up in conversation.</h2>
+      <p class="section-intro">Chamber meetings, masterminds, podcasts, coffee chats. Pick the version that fits the moment.</p>
 
       <div class="card">
-        <h3 class="card-title">15-Second Mention</h3>
-        <p class="card-subtitle">Drop-in moments, "what's new with you?", quick networking exchanges.</p>
-        <div class="copy-card">
-          <div class="copy-display">I'm actually speaking at a women's leadership conference in Utah this August — Let Her Rise. Three days, eight women, faith-centered. It's for women entrepreneurs who are tired of pushing through and ready to build something more sustainable. Aug 26–28.</div>
-          <textarea class="copy-source" hidden>I'm actually speaking at a women's leadership conference in Utah this August — Let Her Rise. Three days, eight women, faith-centered. It's for women entrepreneurs who are tired of pushing through and ready to build something more sustainable. Aug 26–28.</textarea>
-          <button class="btn btn-ghost btn-sm copy-btn">Copy</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">30-Second Elevator Pitch</h3>
-        <p class="card-subtitle">For networking events, masterminds, "tell me more."</p>
-        <div class="copy-card">
-          <div class="copy-display">I'm speaking at Let Her Rise — it's a three-day conference for women entrepreneurs happening Aug 26–28 in Lindon, Utah. Eight speakers, faith-centered, and the audience is specifically women who are doing the real work of building businesses while navigating real life — burnout, chronic illness, motherhood, ADHD, perimenopause, the actual stuff.
-
-I'm bringing my talk on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird is open if you know someone who'd love it — or want to come yourself.</div>
-          <textarea class="copy-source" hidden>I'm speaking at Let Her Rise — it's a three-day conference for women entrepreneurs happening Aug 26–28 in Lindon, Utah. Eight speakers, faith-centered, and the audience is specifically women who are doing the real work of building businesses while navigating real life — burnout, chronic illness, motherhood, ADHD, perimenopause, the actual stuff.
-
-I'm bringing my talk on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird is open if you know someone who'd love it — or want to come yourself.</textarea>
-          <button class="btn btn-ghost btn-sm copy-btn">Copy</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">60-Second Deeper Version</h3>
-        <p class="card-subtitle">Podcast intros, "tell me your whole story," 1:1 meetings.</p>
-        <div class="copy-card">
-          <div class="copy-display">Let me tell you about something I'm really excited about.
-
-I'm one of eight speakers at Let Her Rise this August — a women's leadership conference in Utah hosted by Jeana Nunez. What makes it different from every other women's event I've been to is the audience: it's specifically built for women entrepreneurs who are doing the real work behind the scenes. Not the highlight reel.
-
-[INSERT YOUR PERSONAL HOOK — e.g., "When I was building my first business, I was simultaneously navigating [SPECIFIC CHALLENGE] and there was no room I could walk into where I didn't have to either pretend everything was fine or unpack the whole thing. Let Her Rise is built to be that missing room."]
-
-My talk is on [TALK TITLE] — and the heart of it is [ONE-SENTENCE PROMISE]. Aug 26–28, Lindon, UT. If anyone you know would feel seen in that room, send them my way.</div>
-          <textarea class="copy-source" hidden>Let me tell you about something I'm really excited about.
-
-I'm one of eight speakers at Let Her Rise this August — a women's leadership conference in Utah hosted by Jeana Nunez. What makes it different from every other women's event I've been to is the audience: it's specifically built for women entrepreneurs who are doing the real work behind the scenes. Not the highlight reel.
-
-[INSERT YOUR PERSONAL HOOK — e.g., "When I was building my first business, I was simultaneously navigating [SPECIFIC CHALLENGE] and there was no room I could walk into where I didn't have to either pretend everything was fine or unpack the whole thing. Let Her Rise is built to be that missing room."]
-
-My talk is on [TALK TITLE] — and the heart of it is [ONE-SENTENCE PROMISE]. Aug 26–28, Lindon, UT. If anyone you know would feel seen in that room, send them my way.</textarea>
-          <button class="btn btn-ghost btn-sm copy-btn">Copy</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">The "Hard Ask" Script</h3>
-        <p class="card-subtitle">For one specific person you really want in the room. Use sparingly — its power is in its specificity.</p>
-        <div class="copy-card">
-          <div class="copy-display">Can I tell you something a little forward?
-
-Of everyone I've talked to about Let Her Rise, you are at the top of the list of people I'd love to have in that room. [SPECIFIC REASON — e.g., 'You're navigating the exact season Jeana built this for' / 'Your work and my talk are saying parallel things' / 'You've told me twice this year how alone this all feels — this is the room that fixes that.']
-
-I'm not going to push you. But I want you to know that if you came, you'd have someone in the room who already sees you and already wants you there. That's me.
-
-Early Bird closes [DATE]. Will you at least look at the link?</div>
-          <textarea class="copy-source" hidden>Can I tell you something a little forward?
-
-Of everyone I've talked to about Let Her Rise, you are at the top of the list of people I'd love to have in that room. [SPECIFIC REASON — e.g., 'You're navigating the exact season Jeana built this for' / 'Your work and my talk are saying parallel things' / 'You've told me twice this year how alone this all feels — this is the room that fixes that.']
-
-I'm not going to push you. But I want you to know that if you came, you'd have someone in the room who already sees you and already wants you there. That's me.
-
-Early Bird closes [DATE]. Will you at least look at the link?</textarea>
-          <button class="btn btn-ghost btn-sm copy-btn">Copy</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">Common Questions People Will Ask</h3>
-        <p class="card-subtitle">Have these ready — they come up every conversation.</p>
-
-        <div style="display: grid; gap: 16px;">
-          <div>
-            <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"Where is it?"</strong>
-            <p class="lead mt-0" style="margin-top: 4px;">Castle Park Event Center in Lindon, Utah — about 40 minutes south of the Salt Lake City airport.</p>
+        <details class="dropdown">
+          <summary>15-Second Mention</summary>
+          <div class="dropdown-body">
+            <p class="card-subtitle">For quick networking moments or when someone casually asks what you're up to.</p>
+            <div class="copy-card">
+              <div class="copy-display">I'm speaking at a women's leadership conference here in Utah this August, Let Her Rise. Three days, eight speakers, faith-centered. It's for women entrepreneurs who are tired of pushing through and ready to build something more sustainable. Aug 26 to 28.</div>
+              <textarea class="copy-source" hidden>I'm speaking at a women's leadership conference here in Utah this August, Let Her Rise. Three days, eight speakers, faith-centered. It's for women entrepreneurs who are tired of pushing through and ready to build something more sustainable. Aug 26 to 28.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy</button>
+            </div>
           </div>
-          <div>
-            <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"Who's it for?"</strong>
-            <p class="lead mt-0" style="margin-top: 4px;">Women entrepreneurs and business owners — specifically the ones who are tired of pushing through. There's a real focus on doing this work while navigating real life: chronic illness, perimenopause, ADHD, faith, motherhood. It's for anyone building something on her own terms.</p>
+        </details>
+
+        <details class="dropdown">
+          <summary>30-Second Version</summary>
+          <div class="dropdown-body">
+            <p class="card-subtitle">When they want a bit more. Networking events, masterminds, "tell me more."</p>
+            <div class="copy-card">
+              <div class="copy-display">So I'm speaking at Let Her Rise, it's a three-day conference for women entrepreneurs happening Aug 26 to 28 in Lindon, Utah. Eight speakers, faith-centered. What I love about it is that the audience is specifically built for women doing the real work behind the scenes (burnout, chronic illness, motherhood, ADHD, perimenopause, all of it). Not the highlight reel.
+
+My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's open if you know someone who'd love it, or want to come yourself.</div>
+              <textarea class="copy-source" hidden>So I'm speaking at Let Her Rise, it's a three-day conference for women entrepreneurs happening Aug 26 to 28 in Lindon, Utah. Eight speakers, faith-centered. What I love about it is that the audience is specifically built for women doing the real work behind the scenes (burnout, chronic illness, motherhood, ADHD, perimenopause, all of it). Not the highlight reel.
+
+My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's open if you know someone who'd love it, or want to come yourself.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy</button>
+            </div>
           </div>
-          <div>
-            <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"Is it religious?"</strong>
-            <p class="lead mt-0" style="margin-top: 4px;">It's faith-centered, but not preachy. Jeana built it as a God-centered space for women entrepreneurs — meaning faith is the foundation, not the marketing angle. You don't need to belong to a specific tradition to feel welcome.</p>
+        </details>
+
+        <details class="dropdown">
+          <summary>Common Questions People Will Ask</summary>
+          <div class="dropdown-body">
+            <p class="card-subtitle">These come up in basically every conversation. Have them ready.</p>
+
+            <div style="display: grid; gap: 18px; margin-top: 12px;">
+              <div>
+                <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"Where is it?"</strong>
+                <p class="lead mt-0" style="margin-top: 4px;">Castle Park Event Center in Lindon, Utah. About 40 minutes south of the Salt Lake City airport.</p>
+              </div>
+              <div>
+                <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"Who's it for?"</strong>
+                <p class="lead mt-0" style="margin-top: 4px;">Women entrepreneurs and business owners, especially the ones who are tired of pushing through. The focus is on doing this kind of work while navigating real life: chronic illness, perimenopause, ADHD, motherhood, faith. It's for anyone building something on her own terms.</p>
+              </div>
+              <div>
+                <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"How much is it?"</strong>
+                <p class="lead mt-0" style="margin-top: 4px;">Early Bird is $297 for Standard and $447 for VIP. It goes up by $100 once Early Bird closes. VIP is capped at 50 and includes extra workshops, a sound bath, and morning experiences.</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"How much is it?"</strong>
-            <p class="lead mt-0" style="margin-top: 4px;">Early Bird is $297 for Standard, $447 for VIP. Goes up by $100 after Early Bird closes. VIP is capped at 50 and includes extra workshops, a sound bath, and morning experiences.</p>
-          </div>
-          <div>
-            <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"Who else is speaking?"</strong>
-            <p class="lead mt-0" style="margin-top: 4px;">Eight women across faith, business, body, and leadership. Plus a keynote from Jeff Griffin — he's a USA Paralympian whose story is genuinely one of the most powerful I've heard.</p>
-          </div>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -1662,7 +1644,7 @@ Early Bird closes [DATE]. Will you at least look at the link?</textarea>
     <div class="container">
       <div class="section-eyebrow">07 · Email Signature Snippet</div>
       <h2 class="section-title">Make every email a promo.</h2>
-      <p class="section-intro">A small HTML block you paste below your normal signature. Every email you send between now and August becomes a passive event promo. Two versions — pick the one that fits your style.</p>
+      <p class="section-intro">A small HTML block you paste below your normal signature. Every email you send between now and August becomes a passive event promo. Two versions, pick the one that fits your style.</p>
 
       <div class="card">
         <h3 class="card-title">Version 1 · Minimal One-Line</h3>
@@ -1742,7 +1724,7 @@ Early Bird closes [DATE]. Will you at least look at the link?</textarea>
 
       <div class="callout">
         <div class="callout-label">After Aug 28</div>
-        <p>Remove this signature once the event is over (or replace with a "Just spoke at Let Her Rise — replay coming" version). Don't leave a dated event promo running indefinitely.</p>
+        <p>Remove this signature once the event is over (or replace with a "Just spoke at Let Her Rise, replay coming" version). Don't leave a dated event promo running indefinitely.</p>
       </div>
     </div>
   </section>
@@ -1754,7 +1736,7 @@ Early Bird closes [DATE]. Will you at least look at the link?</textarea>
     <div class="container">
       <div class="section-eyebrow">That's the kit.</div>
       <h2 class="closeoff-title">Now go fill those seats.</h2>
-      <p class="closeoff-text">You don't have to use every piece. Pick the three things that fit your style, do them well, and stretch them over the next 8–10 weeks. The women who belong in that room are already in your orbit — this kit is just the nudge that gets them to say yes.</p>
+      <p class="closeoff-text">You don't have to use every piece. Pick the three things that fit your style, do them well, and stretch them over the next 8–10 weeks. The women who belong in that room are already in your orbit, this kit is just the nudge that gets them to say yes.</p>
       <p class="closeoff-signoff">See you in Lindon. ✦</p>
     </div>
   </section>
@@ -1765,8 +1747,8 @@ Early Bird closes [DATE]. Will you at least look at the link?</textarea>
   <footer id="help">
     <div class="container">
       <h3>Questions about the kit?</h3>
-      <p>For anything from "how do I customize this?" to "can you tweak a caption?" — reach out to <strong style="color: #FFFFFF;">Tysen</strong> at <a href="mailto:tysen@elevategrowth.solutions"><strong>tysen@elevategrowth.solutions</strong></a>.</p>
-      <p style="margin-top: 16px;">For event logistics — venue, schedule, registration issues — contact Jeana directly.</p>
+      <p>For anything from "how do I customize this?" to "can you tweak a caption?", reach out to <strong style="color: #FFFFFF;">Tysen</strong> at <a href="mailto:tysen@elevategrowth.solutions"><strong>tysen@elevategrowth.solutions</strong></a>.</p>
+      <p style="margin-top: 16px;">For event logistics, venue, schedule, registration issues, contact Jeana directly.</p>
       <hr style="border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 32px 0;">
       <p style="font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Let Her Rise · August 26–28, 2026 · Castle Park Event Center · Lindon, Utah</p>
       <p style="font-size: 12px; color: rgba(217, 196, 204, 0.7); margin-top: 8px;">Marketing kit built by <a href="https://elevategrowth.solutions" target="_blank" style="color: rgba(255,255,255,0.9);">Elevate Growth Solutions</a></p>

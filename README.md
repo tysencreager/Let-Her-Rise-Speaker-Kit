@@ -1,6 +1,6 @@
 # Let Her Rise · Speaker Marketing Kit Site
 
-A single-page static site that bundles every asset in the speaker marketing kit — emails (with live previews + copy buttons), Canva template links, social captions, DM scripts, talking points, and email signature snippets.
+A single-page static site that bundles every asset in the speaker marketing kit, emails (with live previews + copy buttons), Canva template links, social captions, DM scripts, talking points, and email signature snippets.
 
 Built for the 8 Let Her Rise 2026 speakers to use as a one-stop resource hub.
 
@@ -10,17 +10,17 @@ Built for the 8 Let Her Rise 2026 speakers to use as a one-stop resource hub.
 
 You have two paths. Pick the one you prefer.
 
-### Option A — GitHub-connected (recommended, matches your usual workflow)
+### Option A, GitHub-connected (recommended, matches your usual workflow)
 
-1. Create a new GitHub repo (private is fine — Cloudflare Pages doesn't need it to be public).
+1. Create a new GitHub repo (private is fine, Cloudflare Pages doesn't need it to be public).
 2. Push this entire folder to the repo root.
 3. In Cloudflare Pages, "Create a project" → connect to GitHub → select the repo.
-4. Build settings: **leave everything empty** (no build command, no build output directory — it's a static site).
+4. Build settings: **leave everything empty** (no build command, no build output directory, it's a static site).
 5. Deploy. You'll get a `*.pages.dev` URL.
 6. Custom domain: Pages settings → Custom domains → add `letherrise.elevategrowth.solutions`.
 7. DNS: Cloudflare will prompt you to add a CNAME record. Since elevategrowth.solutions is on Cloudflare already, this is a one-click setup.
 
-### Option B — Direct upload (fastest, if you just want it live)
+### Option B, Direct upload (fastest, if you just want it live)
 
 1. Zip this folder.
 2. In Cloudflare Pages, "Create a project" → "Direct upload" → drop the zip.
@@ -64,7 +64,7 @@ Search for `[YOUR NAME]` and `[YOUR EMAIL]` in the footer section. Replace with 
 
 ## How the copy buttons work
 
-The "Copy HTML" buttons on the email cards use `fetch()` to grab the email file content and put it on the clipboard. This requires the site to be served from a real web server (Cloudflare Pages, GitHub Pages, or `python -m http.server` locally) — it won't work if you open `index.html` directly with `file://`.
+The "Copy HTML" buttons on the email cards use `fetch()` to grab the email file content and put it on the clipboard. This requires the site to be served from a real web server (Cloudflare Pages, GitHub Pages, or `python -m http.server` locally), it won't work if you open `index.html` directly with `file://`.
 
 All other copy buttons (captions, DMs, talking points, signature snippets) work everywhere, including locally with `file://`.
 
