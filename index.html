@@ -501,7 +501,8 @@
       position: relative;
       overflow: hidden;
     }
-    .canva-card-image img {
+    .canva-card-image img,
+    .canva-card-image video {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -509,8 +510,10 @@
       object-fit: cover;
       z-index: 2;
     }
-    .canva-card-image:has(img)::before { display: none; }
-    .canva-card-image:has(img) span { display: none; }
+    .canva-card-image:has(img)::before,
+    .canva-card-image:has(video)::before { display: none; }
+    .canva-card-image:has(img) span,
+    .canva-card-image:has(video) span { display: none; }
     .canva-card-image::before {
       content: '';
       position: absolute;
@@ -946,7 +949,10 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
 
         <!-- CANVA TEMPLATE: IG SQUARE -->
         <div class="canva-card">
-          <div class="canva-card-image"><span>1080 × 1080</span></div>
+          <div class="canva-card-image">
+            <img src="assets/images/example-ig-square.png" alt="Example Instagram square post preview">
+            <span>1080 × 1080</span>
+          </div>
           <div class="canva-card-body">
             <h4 class="canva-card-title">Instagram Square Post</h4>
             <p class="canva-card-desc">Works on IG feed, FB feed, and LinkedIn. Your most-used social asset.</p>
@@ -956,7 +962,10 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
 
         <!-- CANVA TEMPLATE: STORY -->
         <div class="canva-card">
-          <div class="canva-card-image"><span>1080 × 1920</span></div>
+          <div class="canva-card-image">
+            <video src="assets/images/example-story.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Example Instagram/Facebook story preview"></video>
+            <span>1080 × 1920</span>
+          </div>
           <div class="canva-card-body">
             <h4 class="canva-card-title">Instagram / Facebook Story</h4>
             <p class="canva-card-desc">Vertical format for IG and FB Stories. High engagement, easy to repost.</p>
@@ -966,7 +975,10 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
 
         <!-- CANVA TEMPLATE: HORIZONTAL -->
         <div class="canva-card">
-          <div class="canva-card-image"><span>1200 × 630</span></div>
+          <div class="canva-card-image">
+            <img src="assets/images/example-horizontal.png" alt="Example LinkedIn / FB horizontal post preview">
+            <span>1200 × 630</span>
+          </div>
           <div class="canva-card-body">
             <h4 class="canva-card-title">LinkedIn / FB Horizontal Post</h4>
             <p class="canva-card-desc">Landscape format optimized for LinkedIn feed and FB sharing.</p>
