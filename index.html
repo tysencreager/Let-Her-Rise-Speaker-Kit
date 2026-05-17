@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let Her Rise · Speaker Marketing Kit</title>
+  <meta name="description" content="The complete marketing kit for Let Her Rise 2026 speakers, emails, social graphics, scripts, and more.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%234A3540'/%3E%3Ctext x='50' y='62' font-family='Georgia,serif' font-size='42' fill='%23F2EDE5' text-anchor='middle' font-weight='bold'%3ELR%3C/text%3E%3C/svg%3E">
+  <style>
+    /* ============================================
+       DESIGN TOKENS
+       ============================================ */
+    :root {
+      --bg: #F2EDE5;
+      --bg-card: #FFFFFF;
+      --bg-soft: #F8F2E9;
+      --aubergine: #4A3540;
+      --aubergine-deep: #3A2730;
+      --rose: #B89BA4;
+      --rose-soft: #D9C4CC;
+      --text: #2A2424;
+      --muted: #8A7E72;
+      --border: #E0D5C8;
+      --border-soft: #EFE6D9;
+
+      --font-serif: 'Cambria', Georgia, 'Times New Roman', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --font-mono: 'SF Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
+
+      --shadow-sm: 0 1px 2px rgba(74, 53, 64, 0.04), 0 1px 3px rgba(74, 53, 64, 0.06);
+      --shadow-md: 0 4px 6px rgba(74, 53, 64, 0.05), 0 10px 15px rgba(74, 53, 64, 0.05);
+      --radius: 4px;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    section, footer { scroll-margin-top: 72px; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(65% 50% at 8% 4%, rgba(184, 155, 164, 0.55) 0%, transparent 65%),
+        radial-gradient(60% 45% at 92% 96%, rgba(74, 53, 64, 0.28) 0%, transparent 60%),
+        radial-gradient(50% 42% at 82% 22%, rgba(217, 196, 204, 0.50) 0%, transparent 65%),
+        radial-gradient(45% 40% at 18% 78%, rgba(184, 155, 164, 0.38) 0%, transparent 60%),
+        radial-gradient(40% 35% at 50% 50%, rgba(217, 196, 204, 0.20) 0%, transparent 70%),
+        var(--bg);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+    }
+    img, video { max-width: 100%; height: auto; display: block; }
+    a { color: var(--aubergine); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--aubergine-deep); }
+    h1, h2, h3, h4, h5 {
+      font-family: var(--font-serif);
+      color: var(--aubergine);
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 0.5em 0;
+    }
+    p { margin: 0 0 1em 0; }
+
+    /* ============================================
+       LAYOUT
+       ============================================ */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    @media (min-width: 768px) {
+      .container { padding: 0 40px; }
+    }
+
+    /* ============================================
+       NAV
+       ============================================ */
+    .nav {
+      background: rgba(242, 237, 229, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+    .nav-brand {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      color: var(--aubergine);
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+    .nav-list {
+      display: flex;
+      gap: 4px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav-list a {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--text);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: var(--radius);
+      transition: background 0.15s;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+    .nav-list a:hover { background: var(--bg-soft); color: var(--aubergine); }
+    .nav-toggle { display: none; background: none; border: none; padding: 8px; cursor: pointer; color: var(--aubergine); }
+
+    @media (max-width: 860px) {
+      .nav-toggle { display: block; }
+      .nav-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 12px 24px 20px;
+        gap: 0;
+        display: none;
+      }
+      .nav-list--open { display: flex; }
+      .nav-list a {
+        padding: 12px 8px;
+        border-bottom: 1px solid var(--border-soft);
+        font-size: 14px;
+      }
+      .nav-list li:last-child a { border-bottom: none; }
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+      padding: 60px 0 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    @media (min-width: 768px) {
+      .hero { padding: 100px 0 70px; }
+    }
+    .hero-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--aubergine);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-size: 48px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    @media (min-width: 768px) {
+      .hero-title { font-size: 72px; }
+    }
+    .hero-subtitle {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-style: italic;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 32px;
+      line-height: 1.4;
+    }
+    @media (min-width: 768px) {
+      .hero-subtitle { font-size: 24px; }
+    }
+    .hero-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--rose);
+      margin: 0 auto 32px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    /* ============================================
+       BUTTONS
+       ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--aubergine);
+      color: #FFFFFF;
+    }
+    .btn-primary:hover {
+      background: var(--aubergine-deep);
+      color: #FFFFFF;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--aubergine);
+      border: 1px solid var(--aubergine);
+    }
+    .btn-secondary:hover {
+      background: var(--aubergine);
+      color: #FFFFFF;
+    }
+    .btn-ghost {
+      background: var(--bg-soft);
+      color: var(--aubergine);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover {
+      background: var(--rose-soft);
+      border-color: var(--rose);
+    }
+    .btn-sm {
+      padding: 8px 14px;
+      font-size: 11px;
+      letter-spacing: 1.2px;
+    }
+    .copy-feedback-success {
+      background: #2D5A3D !important;
+      color: #FFFFFF !important;
+      border-color: #2D5A3D !important;
+    }
+    .copy-feedback-error {
+      background: #8B2D2D !important;
+      color: #FFFFFF !important;
+      border-color: #8B2D2D !important;
+    }
+
+    /* ============================================
+       SECTIONS
+       ============================================ */
+    section { padding: 60px 0; border-bottom: 1px solid var(--border); }
+    @media (min-width: 768px) {
+      section { padding: 80px 0; }
+    }
+    .section-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--aubergine);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+    @media (min-width: 768px) {
+      .section-title { font-size: 48px; }
+    }
+    .section-intro {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 48px;
+      line-height: 1.5;
+    }
+
+    /* ============================================
+       CARDS
+       ============================================ */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (min-width: 768px) {
+      .card { padding: 40px; }
+    }
+    .card-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .card-title {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    .card-subtitle {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    /* ============================================
+       EMAIL PREVIEW
+       ============================================ */
+    .email-preview-wrap {
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin: 20px 0 8px;
+      position: relative;
+    }
+    .email-preview-frame {
+      width: 100%;
+      height: 600px;
+      border: none;
+      display: block;
+      background: #FFFFFF;
+    }
+    .email-preview-label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 10px 16px;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+    }
+    .subject-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+    }
+    .subject-list li {
+      padding: 14px 16px;
+      background: var(--bg-soft);
+      border-left: 3px solid var(--rose);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .subject-text {
+      flex: 1;
+      min-width: 240px;
+    }
+    .subject-text strong {
+      font-family: var(--font-serif);
+      color: var(--aubergine);
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .subject-text em {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ============================================
+       COPYABLE CONTENT
+       ============================================ */
+    .copy-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--rose);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .copy-card-label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--aubergine);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .copy-display {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text);
+      white-space: pre-line;
+      margin-bottom: 16px;
+    }
+    .copy-display strong { color: var(--aubergine); }
+    .copy-source { display: none; }
+    .copy-display p { margin: 0 0 12px 0; }
+    .copy-display p:last-child { margin-bottom: 0; }
+
+    /* ============================================
+       CAMPAIGN CALENDAR
+       ============================================ */
+    .calendar {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+    }
+    .calendar th {
+      background: var(--aubergine);
+      color: #FFFFFF;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .calendar td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .calendar td:first-child {
+      font-weight: 600;
+      color: var(--aubergine);
+      white-space: nowrap;
+      width: 30%;
+    }
+    @media (max-width: 600px) {
+      .calendar { font-size: 13px; }
+      .calendar th, .calendar td { padding: 10px 12px; }
+      .calendar td:first-child { width: 35%; }
+    }
+
+    /* ============================================
+       CANVA CARDS
+       ============================================ */
+    .canva-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .canva-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .canva-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .canva-card-image {
+      background: linear-gradient(135deg, var(--bg-soft) 0%, var(--rose-soft) 100%);
+      aspect-ratio: 1.91 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .canva-card-image img,
+    .canva-card-image video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+    }
+    .canva-card-image:has(img)::before,
+    .canva-card-image:has(video)::before { display: none; }
+    .canva-card-image:has(img) span,
+    .canva-card-image:has(video) span { display: none; }
+    .canva-card-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(45deg, transparent 49%, var(--border) 49%, var(--border) 51%, transparent 51%);
+      background-size: 24px 24px;
+      opacity: 0.3;
+    }
+    .canva-card-image span {
+      position: relative;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--aubergine);
+      font-weight: 600;
+      padding: 6px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+    }
+    .canva-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .canva-card-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--aubergine);
+      margin-bottom: 4px;
+    }
+    .canva-card-desc {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    /* ============================================
+       SIGNATURE PREVIEW
+       ============================================ */
+    .sig-preview {
+      padding: 24px;
+      background: #FFFFFF;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      margin: 16px 0;
+    }
+    .sig-code {
+      background: #2A2424;
+      color: #F2EDE5;
+      padding: 18px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      line-height: 1.5;
+      border-radius: var(--radius);
+      overflow-x: auto;
+      margin: 16px 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    /* ============================================
+       UTILITIES
+       ============================================ */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+    .text-muted { color: var(--muted); }
+    .text-aubergine { color: var(--aubergine); }
+    .mt-0 { margin-top: 0; }
+    .mb-0 { margin-bottom: 0; }
+    .lead {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    hr.divider-rose {
+      border: none;
+      height: 1px;
+      background: var(--rose);
+      margin: 32px 0;
+      width: 60px;
+    }
+
+    /* ============================================
+       CALLOUT
+       ============================================ */
+    .callout {
+      background: var(--bg-soft);
+      border-left: 4px solid var(--rose);
+      padding: 24px 28px;
+      border-radius: var(--radius);
+      margin: 24px 0;
+    }
+    .callout-label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--aubergine);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .closeoff {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 80px 0 90px;
+    }
+    .closeoff .container { max-width: 720px; }
+    .closeoff-title {
+      font-family: var(--font-serif);
+      color: var(--aubergine);
+      font-size: 40px;
+      line-height: 1.15;
+      margin: 12px 0 24px;
+    }
+    .closeoff-text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 32px;
+    }
+    .closeoff-signoff {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--rose);
+      letter-spacing: 2px;
+    }
+    @media (max-width: 600px) {
+      .closeoff { padding: 60px 0 70px; }
+      .closeoff-title { font-size: 30px; }
+    }
+    footer {
+      padding: 50px 0 40px;
+      text-align: center;
+      background: var(--aubergine);
+      color: var(--bg);
+    }
+    footer .container { max-width: 720px; }
+    footer h3 {
+      color: #FFFFFF;
+      font-family: var(--font-serif);
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    footer p {
+      color: var(--rose-soft);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    footer a { color: #FFFFFF; }
+
+    /* ============================================
+       ACCORDION (caption variants)
+       ============================================ */
+    .variant-group { margin-bottom: 28px; }
+    .variant-group-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--aubergine);
+      margin-bottom: 4px;
+    }
+    .variant-group-desc {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    /* ============================================
+       DROPDOWN (details/summary) for talking points, Q&A, DMs
+       ============================================ */
+    details.dropdown {
+      border-top: 1px solid var(--border-soft);
+      padding: 0;
+    }
+    details.dropdown:first-of-type { border-top: none; }
+    details.dropdown summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: var(--font-serif);
+      font-size: 19px;
+      color: var(--aubergine);
+      line-height: 1.3;
+    }
+    details.dropdown summary::-webkit-details-marker { display: none; }
+    details.dropdown summary::after {
+      content: '+';
+      font-family: var(--font-sans);
+      font-size: 22px;
+      color: var(--rose);
+      font-weight: 400;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    details.dropdown[open] summary::after { content: '−'; }
+    details.dropdown summary:hover { color: var(--aubergine-deep); }
+    .dropdown-body {
+      padding: 4px 0 20px;
+    }
+    .dropdown-body .card-subtitle {
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    /* Hashtag pool */
+    .hashtag-group { margin-bottom: 20px; }
+    .hashtag-group h5 {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+    .hashtag-pool {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .hashtag {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--aubergine);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .hashtag:hover {
+      background: var(--rose-soft);
+      border-color: var(--rose);
+    }
+    .hashtag.copied {
+      background: #2D5A3D;
+      color: #FFFFFF;
+      border-color: #2D5A3D;
+    }
+
+    /* ============================================
+       MOTION
+       ============================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.in-view {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Stagger for grid children */
+    .canva-grid > .canva-card.reveal:nth-child(2) { transition-delay: 0.08s; }
+    .canva-grid > .canva-card.reveal:nth-child(3) { transition-delay: 0.16s; }
+    .canva-grid > .canva-card.reveal:nth-child(4) { transition-delay: 0.24s; }
+
+    /* Card and button micro-interactions */
+    .card { transition: box-shadow 0.3s ease, border-color 0.3s ease; }
+    .card:hover { box-shadow: var(--shadow-md); border-color: var(--rose-soft); }
+    .canva-card { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; }
+    .canva-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .canva-card-image img,
+    .canva-card-image video { transition: transform 0.6s ease; }
+    .canva-card:hover .canva-card-image img,
+    .canva-card:hover .canva-card-image video { transform: scale(1.04); }
+    .btn { transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+    .btn-primary:hover, .btn-secondary:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+    .hashtag { transition: background 0.15s, color 0.15s, transform 0.15s; }
+    .hashtag:hover { transform: translateY(-1px); }
+    details.dropdown summary { transition: color 0.2s; }
+    details.dropdown summary::after { transition: color 0.2s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal.in-view { opacity: 1; transform: none; transition: none; }
+      .card, .canva-card, .btn, .hashtag,
+      .canva-card-image img, .canva-card-image video,
+      details.dropdown summary, details.dropdown summary::after {
+        transition: none !important;
+      }
+      .canva-card:hover, .btn-primary:hover, .btn-secondary:hover, .hashtag:hover,
+      .canva-card:hover .canva-card-image img, .canva-card:hover .canva-card-image video {
+        transform: none !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============================================
+       MOBILE POLISH
+       ============================================ */
+    @media (max-width: 600px) {
+      .container { padding: 0 20px; }
+      section { padding: 48px 0; }
+      .hero { padding: 48px 0 36px; }
+      .hero-title { font-size: 40px; letter-spacing: -0.25px; }
+      .hero-subtitle { font-size: 17px; margin-bottom: 28px; }
+      .hero-eyebrow { font-size: 11px; letter-spacing: 3px; }
+      .section-title { font-size: 30px; }
+      .section-intro { font-size: 16px; margin-bottom: 36px; }
+      .card { padding: 24px; }
+      .copy-card { padding: 18px; }
+      .copy-display { font-size: 14.5px; word-wrap: break-word; overflow-wrap: anywhere; }
+      .subject-text { min-width: 0; }
+      .subject-list li { padding: 12px 14px; }
+      .email-preview-frame { height: 480px; }
+      .canva-card-image { aspect-ratio: 16 / 9; }
+      details.dropdown summary { font-size: 17px; padding: 16px 0; }
+      .btn { padding: 12px 18px; font-size: 12px; letter-spacing: 1.2px; }
+      .btn-sm { padding: 10px 14px; font-size: 11px; min-height: 38px; }
+      .hero-actions .btn, .card-actions .btn { width: 100%; justify-content: center; }
+      .calendar { display: block; }
+      .calendar thead { display: none; }
+      .calendar tbody, .calendar tr, .calendar td { display: block; width: 100%; }
+      .calendar tr {
+        margin-bottom: 14px;
+        padding: 14px;
+        background: var(--bg-soft);
+        border-radius: var(--radius);
+      }
+      .calendar td { padding: 4px 0; border: none; }
+      .calendar td:first-child {
+        width: auto;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--aubergine);
+        margin-bottom: 4px;
+      }
+      .hashtag { font-size: 13px; padding: 6px 10px; }
+      footer { padding: 40px 0 32px; }
+      footer h3 { font-size: 22px; }
+    }
+
+    @media (max-width: 380px) {
+      .container { padding: 0 16px; }
+      .hero-title { font-size: 34px; }
+      .section-title { font-size: 26px; }
+      .closeoff-title { font-size: 26px; }
+      .card { padding: 20px; }
+      .btn { font-size: 11px; padding: 11px 14px; letter-spacing: 1px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       NAV
+       ============================================ -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="nav-brand">Let Her Rise · Speaker Kit</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-list">
+        <li><a href="#start">Start</a></li>
+        <li><a href="#emails">Emails</a></li>
+        <li><a href="#graphics">Graphics</a></li>
+        <li><a href="#captions">Captions</a></li>
+        <li><a href="#dms">DMs</a></li>
+        <li><a href="#talking">Talking Points</a></li>
+        <li><a href="#signature">Signature</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-eyebrow">Let Her Rise 2026 · Speaker Marketing Kit</div>
+      <h1 class="hero-title">Welcome to your kit.</h1>
+      <p class="hero-subtitle">Everything you need to fill your six seats, and exactly how to use it. Built so none of us has to reinvent the wheel.</p>
+      <div class="hero-divider"></div>
+      <div class="hero-actions">
+        <a href="#start" class="btn btn-primary">Start Here →</a>
+        <a href="#emails" class="btn btn-secondary">Browse the Kit</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       SECTION 1 · START HERE
+       ============================================ -->
+  <section id="start">
+    <div class="container">
+      <div class="section-eyebrow">01 · Quick Start</div>
+      <h2 class="section-title">Start here.</h2>
+      <p class="section-intro">If you read nothing else, read the instruction sheet. It walks you through what's in the kit, when to use each piece, and the week-one action plan. Then come back here and grab what you need.</p>
+
+      <div class="card">
+        <div class="card-eyebrow">Required Reading</div>
+        <h3 class="card-title">The Speaker Kit Instruction Sheet</h3>
+        <p class="card-subtitle">4-page guide, what's in the kit, how to use it, week-one action plan, do's and don'ts.</p>
+        <div class="card-actions">
+          <a href="assets/docs/let-her-rise-speaker-kit-instructions.pdf" class="btn btn-primary" download>↓ Download Instructions (.pdf)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-eyebrow">Reference</div>
+        <h3 class="card-title">Your Campaign Calendar</h3>
+        <p class="card-subtitle">Stretch your promo over 8–10 weeks so it builds momentum without burning your audience out.</p>
+        <table class="calendar">
+          <thead>
+            <tr><th>Timing</th><th>What to do</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>8–10 weeks out</td><td>Customize and send <strong>Email 1</strong>. Post the announcement IG square and Story. Add the email signature snippet.</td></tr>
+            <tr><td>7–8 weeks</td><td>Build your warm-network outreach list (25–40 people). Begin sending personal DM invites.</td></tr>
+            <tr><td>5–6 weeks</td><td>Post a "behind the talk" caption (Caption #2). Repost Stories.</td></tr>
+            <tr><td>3–4 weeks</td><td>Customize and send <strong>Email 2</strong> (talk preview). Post a matching mid-cycle social.</td></tr>
+            <tr><td>2 weeks</td><td>Post "who this is for" caption (Caption #3). Follow up on warm DMs that haven't replied.</td></tr>
+            <tr><td>7–10 days</td><td>Customize and send <strong>Email 3</strong> (last call). Post last-call socials. Send last-call DMs.</td></tr>
+            <tr><td>Throughout</td><td>Use the talking points in every networking conversation. Drop the event link wherever it fits.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 2 · EMAILS
+       ============================================ -->
+  <section id="emails">
+    <div class="container">
+      <div class="section-eyebrow">02 · Email Templates</div>
+      <h2 class="section-title">Three emails. One arc.</h2>
+      <p class="section-intro">Announcement → talk preview → last call. Each one ready to copy into your email provider. Flodesk, Mailchimp, MailerLite, ConvertKit, they all work. Customize the bracketed bits and the header image, then send.</p>
+      <p class="section-intro" style="margin-top: -8px;"><em>P.S. If you don't yet have a place you're sending out bulk emails from, I highly recommend MailerLite.</em></p>
+
+      <!-- EMAIL 01 -->
+      <div class="card">
+        <div class="card-eyebrow">Email 1 · Send 8–10 weeks out</div>
+        <h3 class="card-title">The Announcement</h3>
+        <p class="card-subtitle">Big-picture, emotional, exciting. Your audience hears the news for the first time.</p>
+
+        <strong style="font-family: var(--font-sans); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); display: block; margin-top: 8px;">Subject Line Options</strong>
+        <ul class="subject-list">
+          <li><div class="subject-text"><strong>I'm taking the stage, and I'm saving you a seat</strong><em>Preview: Let Her Rise · Aug 26–28 · Utah</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: I'm taking the stage, and I'm saving you a seat
+Preview: Let Her Rise · Aug 26–28 · Utah</textarea></li>
+          <li><div class="subject-text"><strong>For the woman who's tired of pushing through</strong><em>Preview: 3 days. 8 speakers. One sacred decision.</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: For the woman who's tired of pushing through
+Preview: 3 days. 8 speakers. One sacred decision.</textarea></li>
+          <li><div class="subject-text"><strong>You're invited to rise with me</strong><em>Preview: Aug 26–28, 2026 · Lindon, UT · Early Bird open</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: You're invited to rise with me
+Preview: Aug 26–28, 2026 · Lindon, UT · Early Bird open</textarea></li>
+        </ul>
+
+        <div class="email-preview-wrap">
+          <div class="email-preview-label">Live Preview</div>
+          <iframe class="email-preview-frame" src="assets/emails/01-announcement.html" loading="lazy" title="Email 1 preview"></iframe>
+        </div>
+
+        <div class="card-actions">
+          <button class="btn btn-primary copy-btn" data-copy-file="assets/emails/01-announcement.html">Copy HTML</button>
+          <a href="assets/emails/01-announcement.html" download class="btn btn-secondary">↓ Download .html</a>
+          <a href="assets/emails/01-announcement.html" target="_blank" class="btn btn-ghost">Open Full Preview ↗</a>
+        </div>
+      </div>
+
+      <!-- EMAIL 02 -->
+      <div class="card">
+        <div class="card-eyebrow">Email 2 · Send 3–4 weeks out</div>
+        <h3 class="card-title">The Talk Preview</h3>
+        <p class="card-subtitle">Refined, personal, content-forward. Tease what you're bringing on stage and pull the fence-sitters off the fence.</p>
+
+        <strong style="font-family: var(--font-sans); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); display: block; margin-top: 8px;">Subject Line Options</strong>
+        <ul class="subject-list">
+          <li><div class="subject-text"><strong>Here's what I'm bringing to the Let Her Rise stage</strong><em>Preview: A preview of the talk · Aug 26 · Lindon, UT</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: Here's what I'm bringing to the Let Her Rise stage
+Preview: A preview of the talk · Aug 26 · Lindon, UT</textarea></li>
+          <li><div class="subject-text"><strong>Some talks you prepare for weeks. This one I've prepared for years.</strong><em>Preview: What I want you to walk away with.</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: Some talks you prepare for weeks. This one I've prepared for years.
+Preview: What I want you to walk away with.</textarea></li>
+          <li><div class="subject-text"><strong>The 3 things I want you to leave with</strong><em>Preview: Behind my talk at Let Her Rise.</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: The 3 things I want you to leave with
+Preview: Behind my talk at Let Her Rise.</textarea></li>
+        </ul>
+
+        <div class="email-preview-wrap">
+          <div class="email-preview-label">Live Preview</div>
+          <iframe class="email-preview-frame" src="assets/emails/02-the-talk.html" loading="lazy" title="Email 2 preview"></iframe>
+        </div>
+
+        <div class="card-actions">
+          <button class="btn btn-primary copy-btn" data-copy-file="assets/emails/02-the-talk.html">Copy HTML</button>
+          <a href="assets/emails/02-the-talk.html" download class="btn btn-secondary">↓ Download .html</a>
+          <a href="assets/emails/02-the-talk.html" target="_blank" class="btn btn-ghost">Open Full Preview ↗</a>
+        </div>
+      </div>
+
+      <!-- EMAIL 03 -->
+      <div class="card">
+        <div class="card-eyebrow">Email 3 · Send 7–10 days before Early Bird closes</div>
+        <h3 class="card-title">The Last Call</h3>
+        <p class="card-subtitle">Direct, brief, urgent. This is the closer, so don't bury the deadline.</p>
+
+        <strong style="font-family: var(--font-sans); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); display: block; margin-top: 8px;">Subject Line Options</strong>
+        <ul class="subject-list">
+          <li><div class="subject-text"><strong>Last call: Early Bird closes [DATE]</strong><em>Preview: I'm not chasing. I am rooting for you.</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: Last call: Early Bird closes [DATE]
+Preview: I'm not chasing. I am rooting for you.</textarea></li>
+          <li><div class="subject-text"><strong>Final reminder before doors close</strong><em>Preview: 3 days. 8 women. One decision left.</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: Final reminder before doors close
+Preview: 3 days. 8 women. One decision left.</textarea></li>
+          <li><div class="subject-text"><strong>Don't make me say I told you so in November</strong><em>Preview: Last chance for Early Bird pricing.</em></div><button class="btn btn-sm btn-ghost copy-btn">Copy</button><textarea class="copy-source" hidden>Subject: Don't make me say I told you so in November
+Preview: Last chance for Early Bird pricing.</textarea></li>
+        </ul>
+
+        <div class="callout">
+          <div class="callout-label">Before You Send</div>
+          <p>Email 3 has two placeholders for the <strong>Early Bird close date</strong>, search for <code style="background: rgba(74,53,64,0.08); padding: 1px 6px; border-radius: 3px;">[DATE]</code> and update both spots before sending.</p>
+        </div>
+
+        <div class="email-preview-wrap">
+          <div class="email-preview-label">Live Preview</div>
+          <iframe class="email-preview-frame" src="assets/emails/03-last-call.html" loading="lazy" title="Email 3 preview"></iframe>
+        </div>
+
+        <div class="card-actions">
+          <button class="btn btn-primary copy-btn" data-copy-file="assets/emails/03-last-call.html">Copy HTML</button>
+          <a href="assets/emails/03-last-call.html" download class="btn btn-secondary">↓ Download .html</a>
+          <a href="assets/emails/03-last-call.html" target="_blank" class="btn btn-ghost">Open Full Preview ↗</a>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">How to use these in your email tool</div>
+        <p>Click <strong>Copy HTML</strong>, then in your email provider create a new email and switch to "code" or "source" view (sometimes called "&lt;/&gt;" or "HTML editor"). Paste the entire HTML in. Save and preview. <strong>Always send yourself a test before sending to your list.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 3 · GRAPHICS (Canva)
+       ============================================ -->
+  <section id="graphics">
+    <div class="container">
+      <div class="section-eyebrow">03 · Visual Assets</div>
+      <h2 class="section-title">Your Canva templates.</h2>
+      <p class="section-intro">Four reusable templates. Click "Use This Template," your own editable copy auto-creates in your Canva account. Swap your photo, name, title, and speech title. Do <em>not</em> change the colors or fonts, consistency across all 8 speakers is part of the design.</p>
+
+      <div class="canva-grid">
+        <!-- CANVA TEMPLATE: EMAIL HEADER -->
+        <div class="canva-card">
+          <div class="canva-card-image">
+            <img src="assets/images/example-email-header.png" alt="Example email header preview">
+            <span>1200 × 600</span>
+          </div>
+          <div class="canva-card-body">
+            <h4 class="canva-card-title">Email Header Image</h4>
+            <p class="canva-card-desc">Use across all three emails. Your photo + name + title + speech title.</p>
+            <a href="https://canva.link/vn9iaj1d9wpnz4j" class="btn btn-primary" target="_blank" data-canva="email-header">Use This Template ↗</a>
+          </div>
+        </div>
+
+        <!-- CANVA TEMPLATE: IG SQUARE -->
+        <div class="canva-card">
+          <div class="canva-card-image">
+            <img src="assets/images/example-ig-square.png" alt="Example Instagram square post preview">
+            <span>1080 × 1080</span>
+          </div>
+          <div class="canva-card-body">
+            <h4 class="canva-card-title">Instagram Square Post</h4>
+            <p class="canva-card-desc">Works on IG feed, FB feed, and LinkedIn. Your most-used social asset.</p>
+            <a href="https://canva.link/727x7zeva08kv6f" class="btn btn-primary" target="_blank" data-canva="ig-square">Use This Template ↗</a>
+          </div>
+        </div>
+
+        <!-- CANVA TEMPLATE: STORY -->
+        <div class="canva-card">
+          <div class="canva-card-image">
+            <video src="assets/images/example-story.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Example Instagram/Facebook story preview"></video>
+            <span>1080 × 1920</span>
+          </div>
+          <div class="canva-card-body">
+            <h4 class="canva-card-title">Instagram / Facebook Story</h4>
+            <p class="canva-card-desc">Vertical format for IG and FB Stories. High engagement, easy to repost.</p>
+            <a href="https://canva.link/qfmqg47n4lcm79j" class="btn btn-primary" target="_blank" data-canva="story">Use This Template ↗</a>
+          </div>
+        </div>
+
+        <!-- CANVA TEMPLATE: HORIZONTAL -->
+        <div class="canva-card">
+          <div class="canva-card-image">
+            <img src="assets/images/example-horizontal.png" alt="Example LinkedIn / FB horizontal post preview">
+            <span>1200 × 630</span>
+          </div>
+          <div class="canva-card-body">
+            <h4 class="canva-card-title">LinkedIn / FB Horizontal Post</h4>
+            <p class="canva-card-desc">Landscape format optimized for LinkedIn feed and FB sharing.</p>
+            <a href="https://canva.link/68njc3ik2ieg88p" class="btn btn-primary" target="_blank" data-canva="horizontal">Use This Template ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">Quick Workflow</div>
+        <p>1. Click "Use This Template" → it opens an editable copy in your Canva. <br>2. Swap your photo (drop image into the frame), your name, title/company, and speech title. <br>3. Export at PNG quality. <br>4. Upload to your email provider's media library or post directly to social.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 4 · CAPTIONS
+       ============================================ -->
+  <section id="captions">
+    <div class="container">
+      <div class="section-eyebrow">04 · Social Caption Library</div>
+      <h2 class="section-title">What to write next to the photo.</h2>
+      <p class="section-intro">Multiple voice variants per post type. Pick the one closest to how you naturally write, then tweak the bracketed bits. Each one ends with a CTA, leave it in.</p>
+
+      <!-- ANNOUNCEMENT -->
+      <div class="card">
+        <h3 class="card-title">1. Announcement Posts</h3>
+        <p class="card-subtitle">For your first post breaking the news. Post this once you've added the header image to your bio.</p>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant A: Vulnerable / mission-driven</h4>
+          <div class="copy-card">
+            <div class="copy-display">There are rooms you walk into. And there are rooms you've been <em>called</em> to.
+
+This August, I'm stepping onto the stage at Let Her Rise, a 3-day experience for women entrepreneurs who are tired of pushing through and ready to rise on their own terms.
+
+I said yes because if I'd had a room like this when I was starting out, everything would have been different.
+
+If something just stirred reading this, trust it.
+
+Aug 26–28 · Lindon, UT · Early Bird open now
+[YOUR LINK]</div>
+            <textarea class="copy-source" hidden>There are rooms you walk into. And there are rooms you've been called to.
+
+This August, I'm stepping onto the stage at Let Her Rise, a 3-day experience for women entrepreneurs who are tired of pushing through and ready to rise on their own terms.
+
+I said yes because if I'd had a room like this when I was starting out, everything would have been different.
+
+If something just stirred reading this, trust it.
+
+Aug 26–28 · Lindon, UT · Early Bird open now
+[YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant B: Confident / business voice</h4>
+          <div class="copy-card">
+            <div class="copy-display">Big news: I'm speaking at Let Her Rise 2026.
+
+3 days. 8 women. One room built for the entrepreneur who's done with the burnout grind and ready to scale from peace instead of pressure.
+
+Aug 26–28 in Lindon, UT.
+
+I picked who I wanted in that room, and you're on the list. Early Bird is open. Tap to reserve your seat.
+
+[YOUR LINK]</div>
+            <textarea class="copy-source" hidden>Big news: I'm speaking at Let Her Rise 2026.
+
+3 days. 8 women. One room built for the entrepreneur who's done with the burnout grind and ready to scale from peace instead of pressure.
+
+Aug 26–28 in Lindon, UT.
+
+I picked who I wanted in that room, and you're on the list. Early Bird is open. Tap to reserve your seat.
+
+[YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant C: Direct / personal invite</h4>
+          <div class="copy-card">
+            <div class="copy-display">I want to tell you something I've been holding for a few weeks.
+
+I'm one of 8 speakers taking the stage at Let Her Rise this August, a 3-day women's leadership experience in Lindon, UT.
+
+I'm bringing my work on [YOUR TOPIC] to a room full of women I know are doing the same things you are: building, leading, surviving, dreaming.
+
+If you've been waiting for a sign, this is it. Aug 26–28.
+
+[YOUR LINK]</div>
+            <textarea class="copy-source" hidden>I want to tell you something I've been holding for a few weeks.
+
+I'm one of 8 speakers taking the stage at Let Her Rise this August, a 3-day women's leadership experience in Lindon, UT.
+
+I'm bringing my work on [YOUR TOPIC] to a room full of women I know are doing the same things you are: building, leading, surviving, dreaming.
+
+If you've been waiting for a sign, this is it. Aug 26–28.
+
+[YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEHIND THE TALK -->
+      <div class="card">
+        <h3 class="card-title">2. Behind-the-Talk Posts</h3>
+        <p class="card-subtitle">For mid-cycle, 3–5 weeks out. Tease what you're bringing on stage.</p>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant A: Preparation moment</h4>
+          <div class="copy-card">
+            <div class="copy-display">Some talks you prepare for weeks. This one I've been preparing for years.
+
+When I take the Let Her Rise stage on Aug 26, I'm bringing [TALK TITLE], the work I wish someone had handed me when I was [STORY MOMENT].
+
+Here's what I want every woman in that room to walk away with:
+
+→ [TAKEAWAY 1]
+→ [TAKEAWAY 2]
+→ [TAKEAWAY 3]
+
+This isn't theory. It's the work I've lived, refined, and watched transform real businesses.
+
+Early Bird seats are still open: [YOUR LINK]</div>
+            <textarea class="copy-source" hidden>Some talks you prepare for weeks. This one I've been preparing for years.
+
+When I take the Let Her Rise stage on Aug 26, I'm bringing [TALK TITLE], the work I wish someone had handed me when I was [STORY MOMENT].
+
+Here's what I want every woman in that room to walk away with:
+
+→ [TAKEAWAY 1]
+→ [TAKEAWAY 2]
+→ [TAKEAWAY 3]
+
+This isn't theory. It's the work I've lived, refined, and watched transform real businesses.
+
+Early Bird seats are still open: [YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant B: Why this room matters</h4>
+          <div class="copy-card">
+            <div class="copy-display">Here's what makes Let Her Rise different from every other women's conference I've been invited to.
+
+It's not a stage full of strategies stacked on strategies.
+It's not motivational fluff.
+It's not a sales pitch dressed up in worship music.
+
+It's a room of God-centered women entrepreneurs doing the actual work, building, leading, struggling, rising, and choosing to do it together instead of alone.
+
+I want you there. Aug 26–28 · Lindon, UT.
+[YOUR LINK]</div>
+            <textarea class="copy-source" hidden>Here's what makes Let Her Rise different from every other women's conference I've been invited to.
+
+It's not a stage full of strategies stacked on strategies.
+It's not motivational fluff.
+It's not a sales pitch dressed up in worship music.
+
+It's a room of God-centered women entrepreneurs doing the actual work, building, leading, struggling, rising, and choosing to do it together instead of alone.
+
+I want you there. Aug 26–28 · Lindon, UT.
+[YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHO THIS IS FOR -->
+      <div class="card">
+        <h3 class="card-title">3. Who This Is For Posts</h3>
+        <p class="card-subtitle">For the woman thinking "is this for me?"</p>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant A: The honest filter</h4>
+          <div class="copy-card">
+            <div class="copy-display">Let Her Rise isn't for everyone. Here's who it IS for:
+
+✓ The woman building a business while her body or brain isn't cooperating
+✓ The one who keeps asking "is it supposed to feel this hard?"
+✓ The one who's tired of conferences full of hustle gospel
+✓ The one whose faith is the foundation, not the marketing angle
+✓ The one ready to lead from peace instead of pressure
+
+If you nodded at any of those, this room was built for you.
+
+Aug 26–28 · Lindon, UT · [YOUR LINK]</div>
+            <textarea class="copy-source" hidden>Let Her Rise isn't for everyone. Here's who it IS for:
+
+✓ The woman building a business while her body or brain isn't cooperating
+✓ The one who keeps asking "is it supposed to feel this hard?"
+✓ The one who's tired of conferences full of hustle gospel
+✓ The one whose faith is the foundation, not the marketing angle
+✓ The one ready to lead from peace instead of pressure
+
+If you nodded at any of those, this room was built for you.
+
+Aug 26–28 · Lindon, UT · [YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant B: The permission slip</h4>
+          <div class="copy-card">
+            <div class="copy-display">A reminder for the woman who's been quietly considering Let Her Rise:
+
+You don't need permission.
+You don't need it to be a "better season."
+You don't need to have it all figured out first.
+
+You just need to decide you're worth a room where you don't have to explain yourself.
+
+Aug 26–28 · Early Bird open · [YOUR LINK]</div>
+            <textarea class="copy-source" hidden>A reminder for the woman who's been quietly considering Let Her Rise:
+
+You don't need permission.
+You don't need it to be a "better season."
+You don't need to have it all figured out first.
+
+You just need to decide you're worth a room where you don't have to explain yourself.
+
+Aug 26–28 · Early Bird open · [YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAST CALL -->
+      <div class="card">
+        <h3 class="card-title">4. Last-Call Urgency Posts</h3>
+        <p class="card-subtitle">Final 7–10 days before Early Bird closes.</p>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant A: Direct urgency</h4>
+          <div class="copy-card">
+            <div class="copy-display">Last call.
+
+Early Bird for Let Her Rise closes [DATE]. After that, seats are +$100 and the VIP rows are capped at 50.
+
+If you've been sitting with this, take this as your nudge.
+
+[YOUR LINK]</div>
+            <textarea class="copy-source" hidden>Last call.
+
+Early Bird for Let Her Rise closes [DATE]. After that, seats are +$100 and the VIP rows are capped at 50.
+
+If you've been sitting with this, take this as your nudge.
+
+[YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant B: Soft urgency / pull</h4>
+          <div class="copy-card">
+            <div class="copy-display">I'm not going to keep posting about Let Her Rise. You know it's happening. You know I'd love to see you there.
+
+So I'll just say this: Aug 26–28 is the room. Early Bird closes [DATE].
+
+I'll be in that room either way. I just want you in it with me.
+
+[YOUR LINK]</div>
+            <textarea class="copy-source" hidden>I'm not going to keep posting about Let Her Rise. You know it's happening. You know I'd love to see you there.
+
+So I'll just say this: Aug 26–28 is the room. Early Bird closes [DATE].
+
+I'll be in that room either way. I just want you in it with me.
+
+[YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+
+        <div class="variant-group">
+          <h4 class="variant-group-title">Variant C: The fence-sitter</h4>
+          <div class="copy-card">
+            <div class="copy-display">If "I'll decide next week" has been your relationship with Let Her Rise for the last month, this is the post for you.
+
+Early Bird closes [DATE]. That's the decision deadline.
+
+Worst case: you spend 3 days in a beautiful Utah venue surrounded by women doing meaningful work.
+Best case: you walk out a different woman than the one who walked in.
+
+[YOUR LINK]</div>
+            <textarea class="copy-source" hidden>If "I'll decide next week" has been your relationship with Let Her Rise for the last month, this is the post for you.
+
+Early Bird closes [DATE]. That's the decision deadline.
+
+Worst case: you spend 3 days in a beautiful Utah venue surrounded by women doing meaningful work.
+Best case: you walk out a different woman than the one who walked in.
+
+[YOUR LINK]</textarea>
+            <button class="btn btn-ghost btn-sm copy-btn">Copy Caption</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HASHTAGS -->
+      <div class="card">
+        <h3 class="card-title">Hashtag Pool</h3>
+        <p class="card-subtitle">Mix 5–10 per post. Click any tag to copy. Don't use all of them at once, pick what's aligned with each post.</p>
+
+        <div class="hashtag-group">
+          <h5>Event-specific (always include)</h5>
+          <div class="hashtag-pool">
+            <span class="hashtag">#LetHerRise</span>
+            <span class="hashtag">#LetHerRise2026</span>
+            <span class="hashtag">#LetHerRiseSpeaker</span>
+          </div>
+        </div>
+        <div class="hashtag-group">
+          <h5>Audience</h5>
+          <div class="hashtag-pool">
+            <span class="hashtag">#WomenInBusiness</span>
+            <span class="hashtag">#WomenEntrepreneurs</span>
+            <span class="hashtag">#WomenLeaders</span>
+            <span class="hashtag">#FaithAndBusiness</span>
+            <span class="hashtag">#ChristianEntrepreneur</span>
+            <span class="hashtag">#WomenOfFaith</span>
+          </div>
+        </div>
+        <div class="hashtag-group">
+          <h5>Regional</h5>
+          <div class="hashtag-pool">
+            <span class="hashtag">#UtahWomen</span>
+            <span class="hashtag">#UtahEntrepreneurs</span>
+            <span class="hashtag">#UtahBusinessOwners</span>
+            <span class="hashtag">#LindonUtah</span>
+            <span class="hashtag">#SLCBusiness</span>
+            <span class="hashtag">#StGeorgeUtah</span>
+          </div>
+        </div>
+        <div class="hashtag-group">
+          <h5>Event-style</h5>
+          <div class="hashtag-pool">
+            <span class="hashtag">#WomensConference</span>
+            <span class="hashtag">#LeadershipConference</span>
+            <span class="hashtag">#BusinessRetreat</span>
+            <span class="hashtag">#PurposeDrivenBusiness</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 5 · DM SCRIPTS
+       ============================================ -->
+  <section id="dms">
+    <div class="container">
+      <div class="section-eyebrow">05 · DM & Text Scripts</div>
+      <h2 class="section-title">For your warm network.</h2>
+      <p class="section-intro">This is where most of your tickets will actually come from. Use these for 1:1 outreach to your closest circle: friends, peers, past clients who you actually think would love it.</p>
+
+      <div class="callout">
+        <div class="callout-label">One Quick Rule</div>
+        <p>Every templated DM needs ONE specific line added before you send it. "Thought of you because of [whatever you actually thought of, their launch, the season they're in, your last conversation]." That single line is the difference between something that lands and something that gets ignored. <strong>Don't skip it.</strong></p>
+      </div>
+
+      <!-- PERSONAL INVITE -->
+      <div class="card">
+        <h3 class="card-title">1. Personal Invite</h3>
+        <p class="card-subtitle">For your close network: friends, peers, past clients.</p>
+
+        <details class="dropdown">
+          <summary>Warm and direct</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME],
+
+I'm speaking at a women's leadership conference here in Utah this August (Let Her Rise, Aug 26 to 28) and I thought of you when I was making my invite list.
+
+[ONE SPECIFIC LINE: why this one is for them]
+
+Want me to send you the link? No pressure either way, just thought you should know about it.</div>
+              <textarea class="copy-source" hidden>Hey [NAME],
+
+I'm speaking at a women's leadership conference here in Utah this August (Let Her Rise, Aug 26 to 28) and I thought of you when I was making my invite list.
+
+[ONE SPECIFIC LINE: why this one is for them]
+
+Want me to send you the link? No pressure either way, just thought you should know about it.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>Casual (closer friends)</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Quick one, are you doing anything Aug 26 to 28?
+
+I'm speaking at a women's business conference here in Utah and the more I think about it the more I think you'd love it.
+
+Want the details, or want me to leave you alone? 😄</div>
+              <textarea class="copy-source" hidden>Quick one, are you doing anything Aug 26 to 28?
+
+I'm speaking at a women's business conference here in Utah and the more I think about it the more I think you'd love it.
+
+Want the details, or want me to leave you alone? 😄</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- FOLLOW-UP -->
+      <div class="card">
+        <h3 class="card-title">2. "Thinking of You" Follow-Up</h3>
+        <p class="card-subtitle">Send 5 to 7 days after the first invite, only if you'd actually follow up.</p>
+
+        <details class="dropdown">
+          <summary>Soft check-in</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME], circling back on the conference thing. No pressure at all. Just wanted to make sure I didn't let it slip past you in case you were on the fence.
+
+[YOUR LINK]</div>
+              <textarea class="copy-source" hidden>Hey [NAME], circling back on the conference thing. No pressure at all. Just wanted to make sure I didn't let it slip past you in case you were on the fence.
+
+[YOUR LINK]</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>Mention something new</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME], I know I sent the Let Her Rise info a bit ago. Not following up to pressure you, but I just got an update on the speaker list and [SPECIFIC DETAIL: e.g., "Jeff Griffin, USA Paralympian, is doing the keynote"]. Thought you might find that interesting.
+
+Anyway, here it is if you want it: [LINK]</div>
+              <textarea class="copy-source" hidden>Hey [NAME], I know I sent the Let Her Rise info a bit ago. Not following up to pressure you, but I just got an update on the speaker list and [SPECIFIC DETAIL: e.g., "Jeff Griffin, USA Paralympian, is doing the keynote"]. Thought you might find that interesting.
+
+Anyway, here it is if you want it: [LINK]</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- GROUP CHAT -->
+      <div class="card">
+        <h3 class="card-title">3. Group Chat / Community Blast</h3>
+        <p class="card-subtitle">Slack, Discord, group thread, mastermind. Where everyone already knows you.</p>
+
+        <details class="dropdown">
+          <summary>Group chat / text thread</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Posting once and never again, promise 😄
+
+I'm speaking at Let Her Rise Aug 26 to 28 in Lindon. It's a 3-day women's leadership conference, 8 speakers, faith-centered, built for the woman who's doing the real work behind the scenes.
+
+If anyone wants more info, here's the link: [YOUR LINK]
+Early Bird's open and I'd love to see any of you there.</div>
+              <textarea class="copy-source" hidden>Posting once and never again, promise 😄
+
+I'm speaking at Let Her Rise Aug 26 to 28 in Lindon. It's a 3-day women's leadership conference, 8 speakers, faith-centered, built for the woman who's doing the real work behind the scenes.
+
+If anyone wants more info, here's the link: [YOUR LINK]
+Early Bird's open and I'd love to see any of you there.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- LAST CALL -->
+      <div class="card">
+        <h3 class="card-title">4. Last-Chance Nudge</h3>
+        <p class="card-subtitle">For specific people who showed interest but haven't pulled the trigger.</p>
+
+        <details class="dropdown">
+          <summary>The honest reminder</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME], quick heads up that Early Bird for Let Her Rise closes [DATE]. After that it's $100 more per seat. Wanted to make sure you knew before the window closed.
+
+If it's a no, totally cool. If it's a maybe, here's the link: [YOUR LINK]</div>
+              <textarea class="copy-source" hidden>Hey [NAME], quick heads up that Early Bird for Let Her Rise closes [DATE]. After that it's $100 more per seat. Wanted to make sure you knew before the window closed.
+
+If it's a no, totally cool. If it's a maybe, here's the link: [YOUR LINK]</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>The personal pull</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Hey [NAME], not gonna keep bugging you about this, but Early Bird for Let Her Rise closes [DATE] and I keep thinking I'd really love to see you in that room.
+
+Last gentle nudge. [YOUR LINK]</div>
+              <textarea class="copy-source" hidden>Hey [NAME], not gonna keep bugging you about this, but Early Bird for Let Her Rise closes [DATE] and I keep thinking I'd really love to see you in that room.
+
+Last gentle nudge. [YOUR LINK]</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Script</button>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- PUSHBACK -->
+      <div class="card">
+        <h3 class="card-title">5. When People Push Back</h3>
+        <p class="card-subtitle">Quick responses for the most common pushback.</p>
+
+        <details class="dropdown">
+          <summary>"It's too expensive."</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Totally get it. For what it's worth, $297 for 3 full days and 8 speakers works out to about $100 a day, which is on the lower end for a conference like this. But I get if the timing's just off, no pressure. Just wanted to make sure you had the full picture.</div>
+              <textarea class="copy-source" hidden>Totally get it. For what it's worth, $297 for 3 full days and 8 speakers works out to about $100 a day, which is on the lower end for a conference like this. But I get if the timing's just off, no pressure. Just wanted to make sure you had the full picture.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>"I can't take 3 days off."</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Yeah, I hear that a lot. Quick thought though, the agenda runs 9 to 6 daily, so you could come for whichever day fits your schedule and still get a ton out of it. Day 1 is "Recognize," Day 2 is "Rewire," Day 3 is "Rise." Each builds on the last, but each stands alone too. Worth at least looking at the schedule.</div>
+              <textarea class="copy-source" hidden>Yeah, I hear that a lot. Quick thought though, the agenda runs 9 to 6 daily, so you could come for whichever day fits your schedule and still get a ton out of it. Day 1 is "Recognize," Day 2 is "Rewire," Day 3 is "Rise." Each builds on the last, but each stands alone too. Worth at least looking at the schedule.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>"I'll think about it." / "Maybe next year."</summary>
+          <div class="dropdown-body">
+            <div class="copy-card">
+              <div class="copy-display">Sounds good. Just so you have it: Early Bird closes [DATE] and it's a $100 jump after that. If you want a reminder before the window closes, happy to send one.</div>
+              <textarea class="copy-source" hidden>Sounds good. Just so you have it: Early Bird closes [DATE] and it's a $100 jump after that. If you want a reminder before the window closes, happy to send one.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy Response</button>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 6 · TALKING POINTS
+       ============================================ -->
+  <section id="talking">
+    <div class="container">
+      <div class="section-eyebrow">06 · Talking Points</div>
+      <h2 class="section-title">For when it comes up in conversation.</h2>
+      <p class="section-intro">Chamber meetings, masterminds, podcasts, coffee chats. Pick the version that fits the moment.</p>
+
+      <div class="card">
+        <details class="dropdown">
+          <summary>15-Second Mention</summary>
+          <div class="dropdown-body">
+            <p class="card-subtitle">For quick networking moments or when someone casually asks what you're up to.</p>
+            <div class="copy-card">
+              <div class="copy-display">I'm speaking at a women's leadership conference here in Utah this August, Let Her Rise. Three days, eight speakers, faith-centered. It's for women entrepreneurs who are tired of pushing through and ready to build something more sustainable. Aug 26 to 28.</div>
+              <textarea class="copy-source" hidden>I'm speaking at a women's leadership conference here in Utah this August, Let Her Rise. Three days, eight speakers, faith-centered. It's for women entrepreneurs who are tired of pushing through and ready to build something more sustainable. Aug 26 to 28.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>30-Second Version</summary>
+          <div class="dropdown-body">
+            <p class="card-subtitle">When they want a bit more. Networking events, masterminds, "tell me more."</p>
+            <div class="copy-card">
+              <div class="copy-display">So I'm speaking at Let Her Rise, it's a three-day conference for women entrepreneurs happening Aug 26 to 28 in Lindon, Utah. Eight speakers, faith-centered. What I love about it is that the audience is specifically built for women doing the real work behind the scenes (burnout, chronic illness, motherhood, ADHD, perimenopause, all of it). Not the highlight reel.
+
+My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's open if you know someone who'd love it, or want to come yourself.</div>
+              <textarea class="copy-source" hidden>So I'm speaking at Let Her Rise, it's a three-day conference for women entrepreneurs happening Aug 26 to 28 in Lindon, Utah. Eight speakers, faith-centered. What I love about it is that the audience is specifically built for women doing the real work behind the scenes (burnout, chronic illness, motherhood, ADHD, perimenopause, all of it). Not the highlight reel.
+
+My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's open if you know someone who'd love it, or want to come yourself.</textarea>
+              <button class="btn btn-ghost btn-sm copy-btn">Copy</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>Common Questions People Will Ask</summary>
+          <div class="dropdown-body">
+            <p class="card-subtitle">These come up in basically every conversation. Have them ready.</p>
+
+            <div style="display: grid; gap: 18px; margin-top: 12px;">
+              <div>
+                <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"Where is it?"</strong>
+                <p class="lead mt-0" style="margin-top: 4px;">Castle Park Event Center in Lindon, Utah. About 40 minutes south of the Salt Lake City airport.</p>
+              </div>
+              <div>
+                <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"Who's it for?"</strong>
+                <p class="lead mt-0" style="margin-top: 4px;">Women entrepreneurs and business owners, especially the ones who are tired of pushing through. The focus is on doing this kind of work while navigating real life: chronic illness, perimenopause, ADHD, motherhood, faith. It's for anyone building something on her own terms.</p>
+              </div>
+              <div>
+                <strong style="font-family: var(--font-serif); color: var(--aubergine); font-size: 16px;">"How much is it?"</strong>
+                <p class="lead mt-0" style="margin-top: 4px;">Early Bird is $297 for Standard and $447 for VIP. It goes up by $100 once Early Bird closes. VIP is capped at 50 and includes extra workshops, a sound bath, and morning experiences.</p>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 7 · EMAIL SIGNATURE
+       ============================================ -->
+  <section id="signature">
+    <div class="container">
+      <div class="section-eyebrow">07 · Email Signature Snippet</div>
+      <h2 class="section-title">Make every email a promo.</h2>
+      <p class="section-intro">A small HTML block you paste below your normal signature. Every email you send between now and August becomes a passive event promo. Two versions, pick the one that fits your style.</p>
+
+      <div class="card">
+        <h3 class="card-title">Version 1 · Minimal One-Line</h3>
+        <p class="card-subtitle">Italic single line, sits below your normal signature like a P.S.</p>
+
+        <div class="sig-preview">
+          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+            <tr>
+              <td style="padding:14px 0 0 0; border-top:1px solid #E0D5C8; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;">
+                Catch me speaking at <a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"><strong>Let Her Rise</strong> · Aug 26–28, 2026 · Lindon, UT</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <pre class="sig-code"><code>&lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"&gt;
+  &lt;tr&gt;
+    &lt;td style="padding:14px 0 0 0; border-top:1px solid #E0D5C8; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;"&gt;
+      Catch me speaking at &lt;a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"&gt;&lt;strong&gt;Let Her Rise&lt;/strong&gt; &middot; Aug 26&amp;ndash;28, 2026 &middot; Lindon, UT&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+        <textarea class="copy-source" hidden>&lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"&gt;
+  &lt;tr&gt;
+    &lt;td style="padding:14px 0 0 0; border-top:1px solid #E0D5C8; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;"&gt;
+      Catch me speaking at &lt;a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"&gt;&lt;strong&gt;Let Her Rise&lt;/strong&gt; &middot; Aug 26&amp;ndash;28, 2026 &middot; Lindon, UT&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</textarea>
+        <button class="btn btn-primary copy-btn">Copy HTML</button>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Version 2 · Boxed Promo Card</h3>
+        <p class="card-subtitle">More attention-grabbing. Use this if you want the event to be noticed.</p>
+
+        <div class="sig-preview">
+          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; max-width:480px;">
+            <tr>
+              <td style="background-color:#F2EDE5; border-left:3px solid #4A3540; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;">
+                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                  <tr><td style="padding:0 0 4px 0; font-size:10px; line-height:1.4; color:#8A7E72; letter-spacing:2px; text-transform:uppercase;">Speaking This August</td></tr>
+                  <tr><td style="padding:0 0 4px 0; font-size:18px; line-height:1.2; color:#4A3540;">Let Her Rise 2026</td></tr>
+                  <tr><td style="padding:0; font-size:13px; line-height:1.5; color:#2A2424;">Aug 26–28 · Lindon, UT · <a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;">Reserve your seat →</a></td></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <pre class="sig-code"><code>&lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; max-width:480px; margin-top:8px;"&gt;
+  &lt;tr&gt;
+    &lt;td style="background-color:#F2EDE5; border-left:3px solid #4A3540; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;"&gt;
+      &lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"&gt;
+        &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:10px; line-height:1.4; color:#8A7E72; letter-spacing:2px; text-transform:uppercase;"&gt;Speaking This August&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:18px; line-height:1.2; color:#4A3540;"&gt;Let Her Rise 2026&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td style="padding:0; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#2A2424;"&gt;Aug 26&amp;ndash;28 &middot; Lindon, UT &middot; &lt;a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"&gt;Reserve your seat &amp;rarr;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+        <textarea class="copy-source" hidden>&lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; max-width:480px; margin-top:8px;"&gt;
+  &lt;tr&gt;
+    &lt;td style="background-color:#F2EDE5; border-left:3px solid #4A3540; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;"&gt;
+      &lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"&gt;
+        &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:10px; line-height:1.4; color:#8A7E72; letter-spacing:2px; text-transform:uppercase;"&gt;Speaking This August&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:18px; line-height:1.2; color:#4A3540;"&gt;Let Her Rise 2026&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td style="padding:0; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#2A2424;"&gt;Aug 26&amp;ndash;28 &middot; Lindon, UT &middot; &lt;a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"&gt;Reserve your seat &amp;rarr;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</textarea>
+        <button class="btn btn-primary copy-btn">Copy HTML</button>
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">After Aug 28</div>
+        <p>Remove this signature once the event is over (or replace with a "Just spoke at Let Her Rise, replay coming" version). Don't leave a dated event promo running indefinitely.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CLOSE-OFF
+       ============================================ -->
+  <section id="closeoff" class="closeoff">
+    <div class="container">
+      <div class="section-eyebrow">That's the kit.</div>
+      <h2 class="closeoff-title">Now go fill those seats.</h2>
+      <p class="closeoff-text">You don't have to use every piece. Pick the three things that fit your style, do them well, and stretch them over the next 8–10 weeks. The women who belong in that room are already in your orbit, this kit is just the nudge that gets them to say yes.</p>
+      <p class="closeoff-signoff">See you in Lindon. ✦</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER · HELP
+       ============================================ -->
+  <footer id="help">
+    <div class="container">
+      <h3>Questions about the kit?</h3>
+      <p>For anything from "how do I customize this?" to "can you tweak a caption?", reach out to <strong style="color: #FFFFFF;">Tysen</strong> at <a href="mailto:tysen@elevategrowth.solutions"><strong>tysen@elevategrowth.solutions</strong></a>.</p>
+      <p style="margin-top: 16px;">For event logistics, venue, schedule, registration issues, contact Jeana directly.</p>
+      <hr style="border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 32px 0;">
+      <p style="font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Let Her Rise · August 26–28, 2026 · Castle Park Event Center · Lindon, Utah</p>
+      <p style="font-size: 12px; color: rgba(217, 196, 204, 0.7); margin-top: 8px;">Marketing kit built by <a href="https://elevategrowth.solutions" target="_blank" style="color: rgba(255,255,255,0.9);">Elevate Growth Solutions</a></p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       SCRIPTS
+       ============================================ -->
+  <script>
+    // Copy buttons
+    document.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.copy-btn');
+      if (!btn) return;
+
+      let content = '';
+      const originalHTML = btn.innerHTML;
+
+      try {
+        // Mode 1: copy contents of an external file (used for email HTML)
+        if (btn.dataset.copyFile) {
+          const res = await fetch(btn.dataset.copyFile);
+          if (!res.ok) throw new Error('Fetch failed');
+          content = await res.text();
+        }
+        // Mode 2: copy from a target selector
+        else if (btn.dataset.copyTarget) {
+          const target = document.querySelector(btn.dataset.copyTarget);
+          if (target) content = target.value || target.textContent.trim();
+        }
+        // Mode 3: copy from nearest .copy-source in the same parent block
+        else {
+          const parent = btn.closest('.copy-card, .card, li, div');
+          if (parent) {
+            const src = parent.querySelector('.copy-source');
+            if (src) content = src.value || src.textContent;
+          }
+        }
+
+        if (!content) throw new Error('No content found');
+
+        await navigator.clipboard.writeText(content);
+        showFeedback(btn, '✓ Copied!', 'success', originalHTML);
+      } catch (err) {
+        console.error('Copy error:', err);
+        showFeedback(btn, '✕ Failed', 'error', originalHTML);
+      }
+    });
+
+    function showFeedback(btn, text, type, originalHTML) {
+      btn.innerHTML = text;
+      btn.classList.add('copy-feedback-' + type);
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.classList.remove('copy-feedback-success', 'copy-feedback-error');
+      }, 2000);
+    }
+
+    // Hashtag click to copy
+    document.querySelectorAll('.hashtag').forEach(tag => {
+      tag.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(tag.textContent.trim());
+          const original = tag.textContent;
+          tag.textContent = '✓ Copied';
+          tag.classList.add('copied');
+          setTimeout(() => {
+            tag.textContent = original;
+            tag.classList.remove('copied');
+          }, 1200);
+        } catch (err) {
+          console.error('Copy failed:', err);
+        }
+      });
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    if (navToggle && navList) {
+      navToggle.addEventListener('click', () => {
+        navList.classList.toggle('nav-list--open');
+      });
+      navList.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          navList.classList.remove('nav-list--open');
+        }
+      });
+    }
+
+    // Scroll-reveal: fade + lift section content as it enters the viewport
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      const revealSelectors = [
+        '.hero-eyebrow', '.hero-title', '.hero-subtitle', '.hero-divider', '.hero-actions',
+        '.section-eyebrow', '.section-title', '.section-intro',
+        '.card', '.canva-card', '.callout',
+        '.closeoff-title', '.closeoff-text', '.closeoff-signoff'
+      ].join(', ');
+      const targets = document.querySelectorAll(revealSelectors);
+      targets.forEach(el => el.classList.add('reveal'));
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+      targets.forEach(el => io.observe(el));
+    }
+  </script>
+
+</body>
+</html>
