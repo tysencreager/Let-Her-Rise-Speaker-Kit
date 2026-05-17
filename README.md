@@ -1,6 +1,6 @@
 # Let Her Rise · Speaker Marketing Kit Site
 
-A single-page static site that bundles every asset in the speaker marketing kit — emails (with live previews + copy buttons), Canva template links, social captions, DM scripts, talking points, email signature snippets, and the press kit one-pager.
+A single-page static site that bundles every asset in the speaker marketing kit — emails (with live previews + copy buttons), Canva template links, social captions, DM scripts, talking points, and email signature snippets.
 
 Built for the 8 Let Her Rise 2026 speakers to use as a one-stop resource hub.
 
@@ -57,7 +57,6 @@ Search for `[YOUR NAME]` and `[YOUR EMAIL]` in the footer section. Replace with 
     │   ├── 02-the-talk.html             ← email 2
     │   └── 03-last-call.html            ← email 3
     └── docs/
-        ├── let-her-rise-bio-onepager.docx           ← press kit download
         └── let-her-rise-speaker-kit-instructions.docx ← instruction sheet download
 ```
 
@@ -95,7 +94,6 @@ Then open `http://localhost:8000` in your browser.
 | DMs | 5 outreach categories including objection handlers |
 | Talking Points | 15s/30s/60s + hard ask + FAQ |
 | Signature | 2 email signature snippets with live previews + copy HTML |
-| Press Kit | One-pager bio download |
 | Help | Your contact info for kit questions |
 
 ---
