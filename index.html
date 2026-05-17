@@ -39,6 +39,7 @@
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 72px; }
     section, footer { scroll-margin-top: 72px; }
+    html { background: var(--bg); }
     body {
       margin: 0;
       padding: 0;
@@ -46,7 +47,13 @@
       font-size: 16px;
       line-height: 1.6;
       color: var(--text);
-      background: var(--bg);
+      background:
+        radial-gradient(60% 45% at 10% 5%, rgba(184, 155, 164, 0.28) 0%, transparent 65%),
+        radial-gradient(55% 40% at 90% 95%, rgba(74, 53, 64, 0.12) 0%, transparent 60%),
+        radial-gradient(45% 38% at 80% 25%, rgba(217, 196, 204, 0.22) 0%, transparent 65%),
+        radial-gradient(40% 35% at 20% 75%, rgba(184, 155, 164, 0.14) 0%, transparent 60%),
+        var(--bg);
+      background-attachment: fixed;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       -webkit-text-size-adjust: 100%;
@@ -779,6 +786,55 @@
       background: #2D5A3D;
       color: #FFFFFF;
       border-color: #2D5A3D;
+    }
+
+    /* ============================================
+       MOTION
+       ============================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.in-view {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Stagger for grid children */
+    .canva-grid > .canva-card.reveal:nth-child(2) { transition-delay: 0.08s; }
+    .canva-grid > .canva-card.reveal:nth-child(3) { transition-delay: 0.16s; }
+    .canva-grid > .canva-card.reveal:nth-child(4) { transition-delay: 0.24s; }
+
+    /* Card and button micro-interactions */
+    .card { transition: box-shadow 0.3s ease, border-color 0.3s ease; }
+    .card:hover { box-shadow: var(--shadow-md); border-color: var(--rose-soft); }
+    .canva-card { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; }
+    .canva-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .canva-card-image img,
+    .canva-card-image video { transition: transform 0.6s ease; }
+    .canva-card:hover .canva-card-image img,
+    .canva-card:hover .canva-card-image video { transform: scale(1.04); }
+    .btn { transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+    .btn-primary:hover, .btn-secondary:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+    .hashtag { transition: background 0.15s, color 0.15s, transform 0.15s; }
+    .hashtag:hover { transform: translateY(-1px); }
+    details.dropdown summary { transition: color 0.2s; }
+    details.dropdown summary::after { transition: color 0.2s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal.in-view { opacity: 1; transform: none; transition: none; }
+      .card, .canva-card, .btn, .hashtag,
+      .canva-card-image img, .canva-card-image video,
+      details.dropdown summary, details.dropdown summary::after {
+        transition: none !important;
+      }
+      .canva-card:hover, .btn-primary:hover, .btn-secondary:hover, .hashtag:hover,
+      .canva-card:hover .canva-card-image img, .canva-card:hover .canva-card-image video {
+        transform: none !important;
+      }
+      html { scroll-behavior: auto; }
     }
 
     /* ============================================
@@ -1894,6 +1950,30 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
           navList.classList.remove('nav-list--open');
         }
       });
+    }
+
+    // Scroll-reveal: fade + lift section content as it enters the viewport
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      const revealSelectors = [
+        '.hero-eyebrow', '.hero-title', '.hero-subtitle', '.hero-divider', '.hero-actions',
+        '.section-eyebrow', '.section-title', '.section-intro',
+        '.card', '.canva-card', '.callout',
+        '.closeoff-title', '.closeoff-text', '.closeoff-signoff'
+      ].join(', ');
+      const targets = document.querySelectorAll(revealSelectors);
+      targets.forEach(el => el.classList.add('reveal'));
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+      targets.forEach(el => io.observe(el));
     }
   </script>
 
