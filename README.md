@@ -57,7 +57,7 @@ Search for `[YOUR NAME]` and `[YOUR EMAIL]` in the footer section. Replace with 
     │   ├── 02-the-talk.html             ← email 2
     │   └── 03-last-call.html            ← email 3
     └── docs/
-        └── let-her-rise-speaker-kit-instructions.docx ← instruction sheet download
+        └── let-her-rise-speaker-kit-instructions.pdf ← instruction sheet download
 ```
 
 ---
