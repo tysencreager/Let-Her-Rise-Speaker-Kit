@@ -672,22 +672,26 @@
     footer {
       padding: 50px 0 40px;
       text-align: center;
-      background: var(--aubergine);
-      color: var(--bg);
+      color: #FFFFFF;
     }
+    footer.block-fuchsia { background: var(--fuchsia); }
     footer .container { max-width: 720px; }
     footer h3 {
       color: #FFFFFF;
       font-family: var(--font-serif);
       font-size: 24px;
       margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(74, 22, 50, 0.35), 0 1px 2px rgba(74, 22, 50, 0.22);
     }
     footer p {
-      color: var(--rose-soft);
+      color: #FFFFFF;
       font-size: 14px;
       margin-bottom: 8px;
+      opacity: 0.95;
+      text-shadow: 0 1px 4px rgba(74, 22, 50, 0.25);
     }
-    footer a { color: #FFFFFF; }
+    footer a { color: #FFFFFF; text-decoration-color: rgba(255, 255, 255, 0.7); }
+    footer hr { background: rgba(255, 255, 255, 0.28) !important; }
 
     /* ============================================
        ACCORDION (caption variants)
@@ -789,9 +793,35 @@
        COLORBLOCK SECTIONS + WAVE DIVIDERS
        ============================================ */
     .block-cream    { background: var(--bg); }
-    .block-pink     { background: var(--fuchsia-soft); }
     .block-fuchsia  { background: var(--fuchsia); color: #FFFFFF; }
     .block-dark     { background: var(--aubergine); color: var(--bg); }
+
+    /* Section-level text inside a fuchsia block goes white + soft shadow.
+       Card content stays unaffected since it lives in white cards. */
+    .block-fuchsia .section-eyebrow {
+      color: #FFFFFF;
+      opacity: 0.95;
+      text-shadow: 0 1px 4px rgba(74, 22, 50, 0.30);
+    }
+    .block-fuchsia .section-title {
+      color: #FFFFFF;
+      text-shadow: 0 2px 10px rgba(74, 22, 50, 0.35), 0 1px 2px rgba(74, 22, 50, 0.25);
+    }
+    .block-fuchsia .section-intro {
+      color: #FFFFFF;
+      opacity: 0.96;
+      text-shadow: 0 1px 6px rgba(74, 22, 50, 0.28);
+    }
+    .block-fuchsia .card { box-shadow: 0 8px 22px rgba(74, 22, 50, 0.18); }
+    .block-fuchsia .card:hover { box-shadow: 0 12px 30px rgba(74, 22, 50, 0.24); border-color: var(--rose-soft); }
+    /* Close-off block when on fuchsia */
+    .block-fuchsia .closeoff-title,
+    .block-fuchsia .closeoff-text,
+    .block-fuchsia .closeoff-signoff {
+      color: #FFFFFF;
+      text-shadow: 0 2px 10px rgba(74, 22, 50, 0.30), 0 1px 2px rgba(74, 22, 50, 0.22);
+    }
+    .block-fuchsia .closeoff-signoff { opacity: 0.95; }
 
     /* The wave sits at the top of a section and is painted with the
        previous section's color, so it reads as the prior color
@@ -822,7 +852,6 @@
     }
     /* Color-block sections drop the old per-section border line */
     section.block-cream,
-    section.block-pink,
     section.block-fuchsia,
     section.block-dark { border-bottom: none; }
 
@@ -864,11 +893,8 @@
       color: #FFFFFF;
     }
 
-    /* Close-off block adjustments under new scheme */
-    .closeoff.block-pink {
-      background: var(--fuchsia-soft);
-      border-top: none;
-    }
+    /* Close-off block flows into the fuchsia footer with no extra border */
+    .closeoff.block-fuchsia { border-top: none; padding-bottom: 70px; }
 
     /* ============================================
        MOTION
@@ -1057,7 +1083,7 @@
   <!-- ============================================
        SECTION 2 · EMAILS
        ============================================ -->
-  <section id="emails" class="block-pink wave-top" style="--wave-from: var(--bg);">
+  <section id="emails" class="block-fuchsia wave-top" style="--wave-from: var(--bg);">
     <div class="container">
       <div class="section-eyebrow">02 · Email Templates</div>
       <h2 class="section-title">Three emails. One arc.</h2>
@@ -1163,7 +1189,7 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
   <!-- ============================================
        SECTION 3 · GRAPHICS (Canva)
        ============================================ -->
-  <section id="graphics" class="block-cream wave-top" style="--wave-from: var(--fuchsia-soft);">
+  <section id="graphics" class="block-cream wave-top" style="--wave-from: var(--fuchsia);">
     <div class="container">
       <div class="section-eyebrow">03 · Visual Assets</div>
       <h2 class="section-title">Your Canva templates.</h2>
@@ -1233,7 +1259,7 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
   <!-- ============================================
        SECTION 4 · CAPTIONS
        ============================================ -->
-  <section id="captions" class="block-pink wave-top" style="--wave-from: var(--bg);">
+  <section id="captions" class="block-fuchsia wave-top" style="--wave-from: var(--bg);">
     <div class="container">
       <div class="section-eyebrow">04 · Social Caption Library</div>
       <h2 class="section-title">What to write next to the photo.</h2>
@@ -1570,7 +1596,7 @@ Best case: you walk out a different woman than the one who walked in.
   <!-- ============================================
        SECTION 5 · DM SCRIPTS
        ============================================ -->
-  <section id="dms" class="block-cream wave-top" style="--wave-from: var(--fuchsia-soft);">
+  <section id="dms" class="block-cream wave-top" style="--wave-from: var(--fuchsia);">
     <div class="container">
       <div class="section-eyebrow">05 · DM & Text Scripts</div>
       <h2 class="section-title">For your warm network.</h2>
@@ -1772,7 +1798,7 @@ Last gentle nudge. [YOUR LINK]</textarea>
   <!-- ============================================
        SECTION 6 · TALKING POINTS
        ============================================ -->
-  <section id="talking" class="block-pink wave-top" style="--wave-from: var(--bg);">
+  <section id="talking" class="block-fuchsia wave-top" style="--wave-from: var(--bg);">
     <div class="container">
       <div class="section-eyebrow">06 · Talking Points</div>
       <h2 class="section-title">For when it comes up in conversation.</h2>
@@ -1835,7 +1861,7 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
   <!-- ============================================
        SECTION 7 · EMAIL SIGNATURE
        ============================================ -->
-  <section id="signature" class="block-cream wave-top" style="--wave-from: var(--fuchsia-soft);">
+  <section id="signature" class="block-cream wave-top" style="--wave-from: var(--fuchsia);">
     <div class="container">
       <div class="section-eyebrow">07 · Email Signature Snippet</div>
       <h2 class="section-title">Make every email a promo.</h2>
@@ -1854,7 +1880,7 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
         <div class="sig-preview" data-sig-preview>
           <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
             <tr>
-              <td style="padding:14px 0 0 0; border-top:1px solid #E0D5C8; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;">
+              <td style="padding:14px 0 0 0; border-top:2px solid #C73A78; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;">
                 Catch me speaking at <a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"><strong>Let Her Rise</strong> · Aug 26–28, 2026 · Lindon, UT</a>
               </td>
             </tr>
@@ -1863,7 +1889,7 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
 
         <pre class="sig-code"><code>&lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"&gt;
   &lt;tr&gt;
-    &lt;td style="padding:14px 0 0 0; border-top:1px solid #E0D5C8; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;"&gt;
+    &lt;td style="padding:14px 0 0 0; border-top:2px solid #C73A78; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;"&gt;
       Catch me speaking at &lt;a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"&gt;&lt;strong&gt;Let Her Rise&lt;/strong&gt; &middot; Aug 26&amp;ndash;28, 2026 &middot; Lindon, UT&lt;/a&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
@@ -1871,7 +1897,7 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
 
         <textarea class="copy-source" hidden>&lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"&gt;
   &lt;tr&gt;
-    &lt;td style="padding:14px 0 0 0; border-top:1px solid #E0D5C8; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;"&gt;
+    &lt;td style="padding:14px 0 0 0; border-top:2px solid #C73A78; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;"&gt;
       Catch me speaking at &lt;a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"&gt;&lt;strong&gt;Let Her Rise&lt;/strong&gt; &middot; Aug 26&amp;ndash;28, 2026 &middot; Lindon, UT&lt;/a&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
@@ -1889,10 +1915,10 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
         <div class="sig-preview" data-sig-preview>
           <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; max-width:480px;">
             <tr>
-              <td style="background-color:#F2EDE5; border-left:3px solid #4A3540; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;">
+              <td style="background-color:#F2EDE5; border-left:3px solid #C73A78; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;">
                 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
                   <tr><td style="padding:0 0 4px 0; font-size:10px; line-height:1.4; color:#8A7E72; letter-spacing:2px; text-transform:uppercase;">Speaking This August</td></tr>
-                  <tr><td style="padding:0 0 4px 0; font-size:18px; line-height:1.2; color:#4A3540;">Let Her Rise 2026</td></tr>
+                  <tr><td style="padding:0 0 4px 0; font-size:18px; line-height:1.2; color:#C73A78;">Let Her Rise 2026</td></tr>
                   <tr><td style="padding:0; font-size:13px; line-height:1.5; color:#2A2424;">Aug 26–28 · Lindon, UT · <a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;">Reserve your seat →</a></td></tr>
                 </table>
               </td>
@@ -1902,10 +1928,10 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
 
         <pre class="sig-code"><code>&lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; max-width:480px; margin-top:8px;"&gt;
   &lt;tr&gt;
-    &lt;td style="background-color:#F2EDE5; border-left:3px solid #4A3540; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;"&gt;
+    &lt;td style="background-color:#F2EDE5; border-left:3px solid #C73A78; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;"&gt;
       &lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"&gt;
         &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:10px; line-height:1.4; color:#8A7E72; letter-spacing:2px; text-transform:uppercase;"&gt;Speaking This August&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:18px; line-height:1.2; color:#4A3540;"&gt;Let Her Rise 2026&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:18px; line-height:1.2; color:#C73A78;"&gt;Let Her Rise 2026&lt;/td&gt;&lt;/tr&gt;
         &lt;tr&gt;&lt;td style="padding:0; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#2A2424;"&gt;Aug 26&amp;ndash;28 &middot; Lindon, UT &middot; &lt;a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"&gt;Reserve your seat &amp;rarr;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
       &lt;/table&gt;
     &lt;/td&gt;
@@ -1914,10 +1940,10 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
 
         <textarea class="copy-source" hidden>&lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; max-width:480px; margin-top:8px;"&gt;
   &lt;tr&gt;
-    &lt;td style="background-color:#F2EDE5; border-left:3px solid #4A3540; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;"&gt;
+    &lt;td style="background-color:#F2EDE5; border-left:3px solid #C73A78; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;"&gt;
       &lt;table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"&gt;
         &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:10px; line-height:1.4; color:#8A7E72; letter-spacing:2px; text-transform:uppercase;"&gt;Speaking This August&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:18px; line-height:1.2; color:#4A3540;"&gt;Let Her Rise 2026&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td style="padding:0 0 4px 0; font-family: Georgia, 'Times New Roman', serif; font-size:18px; line-height:1.2; color:#C73A78;"&gt;Let Her Rise 2026&lt;/td&gt;&lt;/tr&gt;
         &lt;tr&gt;&lt;td style="padding:0; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#2A2424;"&gt;Aug 26&amp;ndash;28 &middot; Lindon, UT &middot; &lt;a href="https://go.mypureaspirations.com/letherrise26-2552" style="color:#4A3540; text-decoration:underline;"&gt;Reserve your seat &amp;rarr;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
       &lt;/table&gt;
     &lt;/td&gt;
@@ -1992,7 +2018,7 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
   <!-- ============================================
        CLOSE-OFF
        ============================================ -->
-  <section id="closeoff" class="closeoff block-pink wave-top" style="--wave-from: var(--bg);">
+  <section id="closeoff" class="closeoff block-fuchsia wave-top" style="--wave-from: var(--bg);">
     <div class="container">
       <div class="section-eyebrow">That's the kit.</div>
       <h2 class="closeoff-title">Now go fill those seats.</h2>
@@ -2004,7 +2030,7 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
   <!-- ============================================
        FOOTER · HELP
        ============================================ -->
-  <footer id="help" class="block-dark wave-top" style="--wave-from: var(--fuchsia-soft);">
+  <footer id="help" class="block-fuchsia">
     <div class="container">
       <h3>Questions about the kit?</h3>
       <p>For anything from "how do I customize this?" to "can you tweak a caption?", reach out to <strong style="color: #FFFFFF;">Tysen</strong> at <a href="mailto:tysen@elevategrowth.solutions"><strong>tysen@elevategrowth.solutions</strong></a>.</p>
