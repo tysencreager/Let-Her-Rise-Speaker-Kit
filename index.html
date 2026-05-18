@@ -1758,13 +1758,19 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
     <div class="container">
       <div class="section-eyebrow">07 · Email Signature Snippet</div>
       <h2 class="section-title">Make every email a promo.</h2>
-      <p class="section-intro">A small HTML block you paste below your normal signature. Every email you send between now and August becomes a passive event promo. Two versions, pick the one that fits your style.</p>
+      <p class="section-intro">A small block you paste below your normal signature. Every email you send between now and August becomes a passive event promo. Two versions, pick the one that fits your style.</p>
+
+      <div class="callout">
+        <div class="callout-label">Before you copy: pick the right button</div>
+        <p style="margin: 0 0 10px 0;"><strong>Using Gmail, Outlook, or Apple Mail?</strong> Use <strong>"Copy for Gmail"</strong>. That copies the rendered signature (with formatting), which is the only thing those signature editors accept.</p>
+        <p style="margin: 0;"><strong>Using MailerLite, Flodesk, or anything that lets you paste raw HTML?</strong> Use <strong>"Copy HTML"</strong>.</p>
+      </div>
 
       <div class="card">
         <h3 class="card-title">Version 1 · Minimal One-Line</h3>
         <p class="card-subtitle">Italic single line, sits below your normal signature like a P.S.</p>
 
-        <div class="sig-preview">
+        <div class="sig-preview" data-sig-preview>
           <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
             <tr>
               <td style="padding:14px 0 0 0; border-top:1px solid #E0D5C8; font-family: Georgia, 'Times New Roman', serif; font-size:13px; line-height:1.5; color:#4A3540; font-style:italic;">
@@ -1789,14 +1795,17 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
     &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</textarea>
-        <button class="btn btn-primary copy-btn">Copy HTML</button>
+        <div class="card-actions">
+          <button class="btn btn-primary copy-formatted-btn">Copy for Gmail</button>
+          <button class="btn btn-ghost copy-btn">Copy HTML</button>
+        </div>
       </div>
 
       <div class="card">
         <h3 class="card-title">Version 2 · Boxed Promo Card</h3>
         <p class="card-subtitle">More attention-grabbing. Use this if you want the event to be noticed.</p>
 
-        <div class="sig-preview">
+        <div class="sig-preview" data-sig-preview>
           <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; max-width:480px;">
             <tr>
               <td style="background-color:#F2EDE5; border-left:3px solid #4A3540; padding:16px 20px; font-family: Georgia, 'Times New Roman', serif;">
@@ -1833,7 +1842,63 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
     &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</textarea>
-        <button class="btn btn-primary copy-btn">Copy HTML</button>
+        <div class="card-actions">
+          <button class="btn btn-primary copy-formatted-btn">Copy for Gmail</button>
+          <button class="btn btn-ghost copy-btn">Copy HTML</button>
+        </div>
+      </div>
+
+      <div class="card" style="background: var(--bg-soft);">
+        <h3 class="card-title">How to add it to your email</h3>
+
+        <details class="dropdown" open>
+          <summary>Gmail (desktop)</summary>
+          <div class="dropdown-body">
+            <ol style="padding-left: 20px; margin: 0;">
+              <li>Click <strong>"Copy for Gmail"</strong> above on the version you want.</li>
+              <li>In Gmail, click the gear icon (top right) → <strong>See all settings</strong>.</li>
+              <li>Scroll to the <strong>Signature</strong> section. Click "Create new" if you don't already have one, or click the pencil icon next to your existing signature to edit it.</li>
+              <li>Place your cursor where you want the Let Her Rise block to appear (typically a line or two below your normal signature) and <strong>paste</strong> (Cmd+V on Mac, Ctrl+V on Windows).</li>
+              <li>Scroll to the bottom of settings and click <strong>Save Changes</strong>. Send yourself a test email to confirm it looks right.</li>
+            </ol>
+            <p style="margin: 12px 0 0 0; font-size: 13px; color: var(--muted);"><em>Common gotcha: if you paste and it shows as raw code (the literal &lt;table&gt; text), you copied the HTML instead. Hit "Copy for Gmail" instead of "Copy HTML" and try again.</em></p>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>Outlook (desktop &amp; web)</summary>
+          <div class="dropdown-body">
+            <ol style="padding-left: 20px; margin: 0;">
+              <li>Click <strong>"Copy for Gmail"</strong> (the button works for Outlook too).</li>
+              <li><strong>Outlook web:</strong> Gear icon → <strong>View all Outlook settings</strong> → Mail → Compose and reply → Email signature.</li>
+              <li><strong>Outlook desktop:</strong> File → Options → Mail → Signatures.</li>
+              <li>Paste the signature into the editor box.</li>
+              <li>Save. Send yourself a test.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>Apple Mail (Mac)</summary>
+          <div class="dropdown-body">
+            <ol style="padding-left: 20px; margin: 0;">
+              <li>Click <strong>"Copy for Gmail"</strong>.</li>
+              <li>Mail → Settings (or Preferences) → <strong>Signatures</strong>.</li>
+              <li>Pick the account, click + to create a new signature.</li>
+              <li>Paste into the signature box on the right.</li>
+              <li>Make sure <strong>"Always match my default message font"</strong> is <em>unchecked</em>, otherwise Apple Mail will strip the styling.</li>
+              <li>Close the window. Compose a new email to confirm it appears.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary>MailerLite / Flodesk / ConvertKit / Mailchimp</summary>
+          <div class="dropdown-body">
+            <p style="margin: 0 0 12px 0;">These platforms accept raw HTML, so use the <strong>"Copy HTML"</strong> button instead. Paste the HTML into the signature editor in source/HTML mode.</p>
+            <p style="margin: 0; font-size: 13px; color: var(--muted);"><em>MailerLite: Account settings → Email signature → switch to HTML view.<br>Flodesk: Workflow / template editor → Edit code block.<br>Most platforms have an HTML toggle in their signature editor.</em></p>
+          </div>
+        </details>
       </div>
 
       <div class="callout">
@@ -1908,6 +1973,47 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
         showFeedback(btn, '✓ Copied!', 'success', originalHTML);
       } catch (err) {
         console.error('Copy error:', err);
+        showFeedback(btn, '✕ Failed', 'error', originalHTML);
+      }
+    });
+
+    // "Copy for Gmail" — copies the rendered signature preview as text/html
+    // so Gmail / Outlook / Apple Mail signature editors render it correctly
+    // instead of pasting raw <table> source code.
+    document.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.copy-formatted-btn');
+      if (!btn) return;
+
+      const card = btn.closest('.card');
+      const preview = card && card.querySelector('[data-sig-preview]');
+      if (!preview) return;
+
+      const originalHTML = btn.innerHTML;
+      const html = preview.innerHTML.trim();
+      const text = preview.innerText.trim();
+
+      try {
+        if (navigator.clipboard && window.ClipboardItem) {
+          await navigator.clipboard.write([
+            new ClipboardItem({
+              'text/html': new Blob([html], { type: 'text/html' }),
+              'text/plain': new Blob([text], { type: 'text/plain' })
+            })
+          ]);
+          showFeedback(btn, '✓ Copied!', 'success', originalHTML);
+        } else {
+          // Fallback: select the preview and run document.execCommand('copy')
+          const range = document.createRange();
+          range.selectNodeContents(preview);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+          const ok = document.execCommand('copy');
+          sel.removeAllRanges();
+          showFeedback(btn, ok ? '✓ Copied!' : '✕ Failed', ok ? 'success' : 'error', originalHTML);
+        }
+      } catch (err) {
+        console.error('Formatted copy error:', err);
         showFeedback(btn, '✕ Failed', 'error', originalHTML);
       }
     });
