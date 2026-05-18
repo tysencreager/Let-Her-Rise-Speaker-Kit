@@ -50,15 +50,7 @@
       font-size: 16px;
       line-height: 1.6;
       color: var(--text);
-      background:
-        radial-gradient(65% 50% at 8% 4%, rgba(199, 58, 120, 0.32) 0%, transparent 65%),
-        radial-gradient(60% 45% at 92% 96%, rgba(74, 53, 64, 0.28) 0%, transparent 60%),
-        radial-gradient(50% 42% at 82% 22%, rgba(242, 196, 216, 0.55) 0%, transparent 65%),
-        radial-gradient(45% 40% at 18% 78%, rgba(199, 58, 120, 0.22) 0%, transparent 60%),
-        radial-gradient(55% 45% at 60% 60%, rgba(217, 196, 204, 0.32) 0%, transparent 70%),
-        radial-gradient(35% 32% at 5% 50%, rgba(242, 196, 216, 0.38) 0%, transparent 65%),
-        var(--bg);
-      background-attachment: fixed;
+      background: var(--bg);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       -webkit-text-size-adjust: 100%;
@@ -650,10 +642,6 @@
        FOOTER
        ============================================ */
     .closeoff {
-      background:
-        linear-gradient(180deg, rgba(242, 196, 216, 0.18) 0%, transparent 60%),
-        var(--bg-soft);
-      border-top: 1px solid var(--fuchsia-soft);
       text-align: center;
       padding: 80px 0 90px;
     }
@@ -798,6 +786,91 @@
     }
 
     /* ============================================
+       COLORBLOCK SECTIONS + WAVE DIVIDERS
+       ============================================ */
+    .block-cream    { background: var(--bg); }
+    .block-pink     { background: var(--fuchsia-soft); }
+    .block-fuchsia  { background: var(--fuchsia); color: #FFFFFF; }
+    .block-dark     { background: var(--aubergine); color: var(--bg); }
+
+    /* The wave sits at the top of a section and is painted with the
+       previous section's color, so it reads as the prior color
+       "dripping" into this one. */
+    .wave-top { position: relative; }
+    .wave-top::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background-color: var(--wave-from, transparent);
+      -webkit-mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L1200,0 L1200,28 C1000,55 800,8 600,30 C400,52 200,4 0,28 Z' fill='%23000'/%3E%3C/svg%3E") no-repeat top center / 100% 100%;
+              mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L1200,0 L1200,28 C1000,55 800,8 600,30 C400,52 200,4 0,28 Z' fill='%23000'/%3E%3C/svg%3E") no-repeat top center / 100% 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    /* Push section content below the wave area */
+    .wave-top > .container { position: relative; z-index: 2; }
+    .wave-top { padding-top: 100px; }
+    @media (min-width: 768px) {
+      .wave-top { padding-top: 120px; }
+    }
+    @media (max-width: 600px) {
+      .wave-top { padding-top: 80px; }
+      .wave-top::before { height: 36px; }
+    }
+    /* Color-block sections drop the old per-section border line */
+    section.block-cream,
+    section.block-pink,
+    section.block-fuchsia,
+    section.block-dark { border-bottom: none; }
+
+    /* Hero (fuchsia block) */
+    .hero.block-fuchsia {
+      background: var(--fuchsia);
+      color: #FFFFFF;
+      border-bottom: none;
+      position: relative;
+    }
+    .hero.block-fuchsia .hero-eyebrow,
+    .hero.block-fuchsia .hero-title,
+    .hero.block-fuchsia .hero-subtitle {
+      color: #FFFFFF;
+      text-shadow: 0 2px 12px rgba(74, 22, 50, 0.35), 0 1px 2px rgba(74, 22, 50, 0.25);
+    }
+    .hero.block-fuchsia .hero-eyebrow { color: #FFFFFF; opacity: 0.92; }
+    .hero.block-fuchsia .hero-subtitle { color: #FFFFFF; opacity: 0.96; }
+    .hero.block-fuchsia .hero-divider {
+      background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, #FFFFFF 50%, rgba(255,255,255,0.4) 100%);
+      box-shadow: 0 1px 6px rgba(74, 22, 50, 0.25);
+    }
+    .hero.block-fuchsia .btn-primary {
+      background: #FFFFFF;
+      color: var(--fuchsia-deep);
+      box-shadow: 0 4px 14px rgba(74, 22, 50, 0.18);
+    }
+    .hero.block-fuchsia .btn-primary:hover {
+      background: var(--bg);
+      color: var(--fuchsia-deep);
+    }
+    .hero.block-fuchsia .btn-secondary {
+      background: transparent;
+      color: #FFFFFF;
+      border-color: rgba(255,255,255,0.85);
+    }
+    .hero.block-fuchsia .btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
+      color: #FFFFFF;
+    }
+
+    /* Close-off block adjustments under new scheme */
+    .closeoff.block-pink {
+      background: var(--fuchsia-soft);
+      border-top: none;
+    }
+
+    /* ============================================
        MOTION
        ============================================ */
     .reveal {
@@ -928,7 +1001,7 @@
   <!-- ============================================
        HERO
        ============================================ -->
-  <header class="hero" id="top">
+  <header class="hero block-fuchsia" id="top">
     <div class="container">
       <div class="hero-eyebrow">Let Her Rise 2026 · Speaker Marketing Kit</div>
       <h1 class="hero-title">Welcome to your kit.</h1>
@@ -944,7 +1017,7 @@
   <!-- ============================================
        SECTION 1 · START HERE
        ============================================ -->
-  <section id="start">
+  <section id="start" class="block-cream wave-top" style="--wave-from: var(--fuchsia);">
     <div class="container">
       <div class="section-eyebrow">01 · Quick Start</div>
       <h2 class="section-title">Start here.</h2>
@@ -984,7 +1057,7 @@
   <!-- ============================================
        SECTION 2 · EMAILS
        ============================================ -->
-  <section id="emails">
+  <section id="emails" class="block-pink wave-top" style="--wave-from: var(--bg);">
     <div class="container">
       <div class="section-eyebrow">02 · Email Templates</div>
       <h2 class="section-title">Three emails. One arc.</h2>
@@ -1090,7 +1163,7 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
   <!-- ============================================
        SECTION 3 · GRAPHICS (Canva)
        ============================================ -->
-  <section id="graphics">
+  <section id="graphics" class="block-cream wave-top" style="--wave-from: var(--fuchsia-soft);">
     <div class="container">
       <div class="section-eyebrow">03 · Visual Assets</div>
       <h2 class="section-title">Your Canva templates.</h2>
@@ -1160,7 +1233,7 @@ Preview: Last chance for Early Bird pricing.</textarea></li>
   <!-- ============================================
        SECTION 4 · CAPTIONS
        ============================================ -->
-  <section id="captions">
+  <section id="captions" class="block-pink wave-top" style="--wave-from: var(--bg);">
     <div class="container">
       <div class="section-eyebrow">04 · Social Caption Library</div>
       <h2 class="section-title">What to write next to the photo.</h2>
@@ -1497,7 +1570,7 @@ Best case: you walk out a different woman than the one who walked in.
   <!-- ============================================
        SECTION 5 · DM SCRIPTS
        ============================================ -->
-  <section id="dms">
+  <section id="dms" class="block-cream wave-top" style="--wave-from: var(--fuchsia-soft);">
     <div class="container">
       <div class="section-eyebrow">05 · DM & Text Scripts</div>
       <h2 class="section-title">For your warm network.</h2>
@@ -1699,7 +1772,7 @@ Last gentle nudge. [YOUR LINK]</textarea>
   <!-- ============================================
        SECTION 6 · TALKING POINTS
        ============================================ -->
-  <section id="talking">
+  <section id="talking" class="block-pink wave-top" style="--wave-from: var(--bg);">
     <div class="container">
       <div class="section-eyebrow">06 · Talking Points</div>
       <h2 class="section-title">For when it comes up in conversation.</h2>
@@ -1762,7 +1835,7 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
   <!-- ============================================
        SECTION 7 · EMAIL SIGNATURE
        ============================================ -->
-  <section id="signature">
+  <section id="signature" class="block-cream wave-top" style="--wave-from: var(--fuchsia-soft);">
     <div class="container">
       <div class="section-eyebrow">07 · Email Signature Snippet</div>
       <h2 class="section-title">Make every email a promo.</h2>
@@ -1919,7 +1992,7 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
   <!-- ============================================
        CLOSE-OFF
        ============================================ -->
-  <section id="closeoff" class="closeoff">
+  <section id="closeoff" class="closeoff block-pink wave-top" style="--wave-from: var(--bg);">
     <div class="container">
       <div class="section-eyebrow">That's the kit.</div>
       <h2 class="closeoff-title">Now go fill those seats.</h2>
@@ -1931,7 +2004,7 @@ My talk is on [YOUR TOPIC] because [ONE-SENTENCE WHY YOU CARE]. Early Bird's ope
   <!-- ============================================
        FOOTER · HELP
        ============================================ -->
-  <footer id="help">
+  <footer id="help" class="block-dark wave-top" style="--wave-from: var(--fuchsia-soft);">
     <div class="container">
       <h3>Questions about the kit?</h3>
       <p>For anything from "how do I customize this?" to "can you tweak a caption?", reach out to <strong style="color: #FFFFFF;">Tysen</strong> at <a href="mailto:tysen@elevategrowth.solutions"><strong>tysen@elevategrowth.solutions</strong></a>.</p>
